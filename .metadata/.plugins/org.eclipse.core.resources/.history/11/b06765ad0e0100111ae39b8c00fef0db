@@ -1,0 +1,11 @@
+package clases;
+
+public class Main {
+
+	public static void main(String[] args) {
+		BuscaMinasControlador juego = new BuscaMinasControlador();
+		juego.iniciarJuego();
+
+	}
+
+}

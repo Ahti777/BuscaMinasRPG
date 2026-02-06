@@ -1,0 +1,38 @@
+package clases;
+
+import vista.BuscaMinasVistaConsola;
+
+/**
+ * 
+ */
+public class BuscaMinasControlador {
+
+	/**
+	 * 
+	 */
+	public BuscaMinasControlador() {
+		super();
+	}
+	
+	public void iniciarJuego(){
+		BuscaMinasVistaConsola vistaConsola = new BuscaMinasVistaConsola();
+		int filas=vistaConsola.pedirFila();
+		int columnas = vistaConsola.pedirColumna();
+		Tabla usoTabla = new Tabla(filas,columnas);
+		boolean condicion = true;
+		do {
+			switch() {
+			case 0:
+				
+			case 1:
+				
+			case 2:
+				
+			case 3:
+				
+			}
+		}while(condicion);
+	}
+	
+
+}

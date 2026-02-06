@@ -1,0 +1,54 @@
+package clases;
+
+import java.util.Scanner;
+
+import vista.BuscaMinasVistaConsola;
+
+/**
+ * 
+ */
+public class BuscaMinasControlador {
+
+	/**
+	 * 
+	 */
+	public BuscaMinasControlador() {
+		super();
+	}
+	
+	public void iniciarJuego(){
+		Scanner teclado = new Scanner(System.in);
+		BuscaMinasVistaConsola vistaConsola = new BuscaMinasVistaConsola();
+		int filas=vistaConsola.pedirFila();
+		int columnas = vistaConsola.pedirColumna();
+		int filaElegida;
+		int columnaElegida;
+		Tabla usoTabla = new Tabla(filas,columnas);
+		boolean condicion = true;
+		int opcionMenu;
+		
+		do {
+			vistaConsola.mostrarMensaje("Quieres empezar a jugar? "
+					+ "\n0. Empezar partida"
+					+ "\n1. Salir");
+			opcionMenu=teclado.nextInt();
+			switch(opcionMenu) {
+			case 0:
+				do {
+					vistaConsola.mostrarTabla(usoTabla);
+					vistaConsola.mostrarMensaje("Elige una fila: ");
+					filaElegida=teclado.nextInt();
+					vistaConsola.mostrarMensaje("Elige una columna: ");
+					columnaElegida=teclado.nextInt();
+					
+				}while(condicion);
+				break;
+			case 1:
+				condicion=false;
+				break;
+			}
+		}while(condicion);
+	}
+	
+
+}

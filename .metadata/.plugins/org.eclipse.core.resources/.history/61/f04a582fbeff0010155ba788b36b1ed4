@@ -1,0 +1,29 @@
+package vista;
+
+public class BuscaMinasVistaConsola implements BuscaMinasVista{
+
+	@Override
+	public void mostrarMensaje(String texto) {
+		System.out.println(texto);
+		
+	}
+
+	@Override
+	public int pedirFila() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int pedirColumna() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void mostrarTable(Table usoTable) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

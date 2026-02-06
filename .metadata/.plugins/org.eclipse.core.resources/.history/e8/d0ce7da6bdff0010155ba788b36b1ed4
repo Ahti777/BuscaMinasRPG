@@ -1,0 +1,31 @@
+package vista;
+
+import clases.Tabla;
+
+/**
+ * @author artem
+ * @version 1.0 01-02-2026
+ */
+public interface BuscaMinasVista {
+	/**
+	 * mostrarMensaje():
+	 * @return void
+	 */
+	void mostrarMensaje(String texto);
+	/**
+	 * pedirFila():
+	 * @return int
+	 */
+	int pedirFila();
+	/**
+	 * pedirColumna():
+	 * @return int
+	 */
+	int pedirColumna();
+	/**
+	 * mostrarTable():
+	 * @return void
+	 */
+	void mostrarTable(Tabla usoTabla);
+
+}

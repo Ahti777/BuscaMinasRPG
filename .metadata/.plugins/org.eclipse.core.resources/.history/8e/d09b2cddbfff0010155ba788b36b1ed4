@@ -1,0 +1,34 @@
+package vista;
+
+import java.util.Scanner;
+
+import clases.Tabla;
+
+public class BuscaMinasVistaConsola implements BuscaMinasVista{
+
+	@Override
+	public void mostrarMensaje(String texto) {
+		System.out.println(texto);
+	}
+
+	@Override
+	public int pedirFila() {
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("Qué cantidad de filas quiere que tenga la tabla?");
+		return teclado.nextInt();
+	}
+
+	@Override
+	public int pedirColumna() {
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("Qué cantidad de columnas va a tener la tabla?");
+		return teclado.nextInt();
+	}
+
+	@Override
+	public void mostrarTabla(Tabla usoTabla) {
+		
+		
+	}
+	
+}

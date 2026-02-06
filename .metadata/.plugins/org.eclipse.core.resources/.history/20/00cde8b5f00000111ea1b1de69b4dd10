@@ -1,0 +1,70 @@
+package vista;
+
+import java.util.Scanner;
+
+import clases.Tabla;
+
+public class BuscaMinasVistaConsola implements BuscaMinasVista {
+
+	/**
+	 * 
+	 */
+	public BuscaMinasVistaConsola() {
+		super();
+	}
+
+	@Override
+	public void mostrarMensaje(String texto) {
+		System.out.println(texto);
+	}
+
+	@Override
+	public int pedirFila() {
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("Qué cantidad de filas quiere que tenga la tabla?");
+		return teclado.nextInt();
+	}
+
+	@Override
+	public int pedirColumna() {
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("Qué cantidad de columnas va a tener la tabla?");
+		return teclado.nextInt();
+	}
+
+	@Override
+	public void mostrarTabla(Tabla usoTabla) {
+		for (int i = 0; usoTabla.getMapaCeldas().length > i; i++) {
+			for (int t = 0; usoTabla.getMapaCeldas()[i].length > t; t++) {
+				if (usoTabla.getMapaCeldas()[i][t].isVisible()) {
+					if (usoTabla.getMapaCeldas()[i][t].isTieneMina()) {
+						System.out.print("X ");
+					} else {
+						System.out.print(usoTabla.getMapaCeldas()[i][t].getNumero() + " ");
+					}
+				} else {
+					if (usoTabla.getMapaCeldas()[i][t].isTieneMina()==false) {
+						usoTabla.calcularNumeroMinas(i, t);
+					}
+					System.out.print(" - ");
+				}
+			}
+			System.out.println("");
+		}
+
+	}
+
+	public void mostrarTablaVisible(Tabla usoTabla) {
+		for (int i = 0; usoTabla.getMapaCeldas().length > i; i++) {
+			for (int t = 0; usoTabla.getMapaCeldas()[i].length > t; t++) {
+				usoTabla.getMapaCeldas()[i][t].setVisible(true);
+				if (usoTabla.getMapaCeldas()[i][t].isVisible()) {
+					System.out.print(usoTabla.getMapaCeldas()[i][t].getNumero() + " ");
+				}
+			}
+			System.out.println("");
+		}
+
+	}
+
+}
