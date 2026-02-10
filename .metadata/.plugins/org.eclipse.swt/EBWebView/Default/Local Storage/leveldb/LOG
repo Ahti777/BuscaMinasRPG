@@ -1,3 +1,2 @@
-2026/02/03-17:24:25.307 2850 Reusing MANIFEST C:\Users\Alumno\Desktop\buscaMinas\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
-2026/02/03-17:24:25.311 2850 Recovering log #3
-2026/02/03-17:24:25.313 2850 Reusing old log C:\Users\Alumno\Desktop\buscaMinas\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb/000003.log 
+2026/02/10-15:46:14.246 3b9c Creating DB C:\Users\Alumno\Desktop\BuscaMinasRPG\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb since it was missing.
+2026/02/10-15:46:14.276 3b9c Reusing MANIFEST C:\Users\Alumno\Desktop\BuscaMinasRPG\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001

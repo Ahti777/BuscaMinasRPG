@@ -5,6 +5,9 @@ package clases;
  * @version 1.0 01-02-2026
  */
 public class Tabla {
+	/**
+	 * 
+	 */
 	private int filas;
 	private int columnas;
 	private Celda[][] mapaCeldas;

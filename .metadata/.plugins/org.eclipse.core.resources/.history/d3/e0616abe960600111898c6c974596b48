@@ -1,0 +1,13 @@
+package clases;
+
+public class Jarron {
+	
+	public int darVida() {
+		int vida = 0;
+		return vida;
+	}
+	public void darExperiencia() {
+		
+	}
+	
+}

@@ -1,0 +1,36 @@
+package clases;
+/**
+ * @Autor Danilo José Mendez Mendez
+ *@version 10/02/2026
+ */
+import java.util.ArrayList;
+
+public class Heroe extends Entidad{
+	/**
+	 * experiencia es un numero que permite subir de nivel
+	 */
+	private int cantidadExperiencia;
+	private ArrayList<Equipamiento>miEquipamiento;
+	private ArrayList<Ataque>listaAtaques;
+	/**
+	 * @param cantidadVida
+	 * @param cantidadAtaque
+	 * @param cantidadExperiencia
+	 * @param miEquipamiento
+	 * @param listaAtaques
+	 */
+	public Heroe(int cantidadVida, int cantidadAtaque, int cantidadExperiencia, ArrayList<Equipamiento> miEquipamiento,
+			ArrayList<Ataque> listaAtaques) {
+		super(cantidadVida, cantidadAtaque);
+		this.cantidadExperiencia = cantidadExperiencia;
+		this.miEquipamiento = miEquipamiento;
+		this.listaAtaques = listaAtaques;
+	}
+	
+	
+	
+	
+	
+	
+	
+}

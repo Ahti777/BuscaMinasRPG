@@ -1,0 +1,20 @@
+package clases;
+
+import java.util.ArrayList;
+
+public class Usuario {
+	
+	private String nombre;
+	
+	private ArrayList<Partida>misPartidas;
+	
+	
+	public void crearPartida() {
+		this.misPartidas= misPartidas;
+	}
+	
+	public void eliminarPartida() {
+		this.misPartidas=misPartidas;
+		
+	}
+}

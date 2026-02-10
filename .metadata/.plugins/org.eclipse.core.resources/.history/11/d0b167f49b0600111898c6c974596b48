@@ -1,0 +1,16 @@
+package clases;
+/**
+ * @Autor Danilo José Mendez Mendez
+ *@version 10/02/2026
+ */
+public class Jarron {
+	
+	public int darVida() {
+		int vida = 0;
+		return vida;
+	}
+	public void darExperiencia() {
+		
+	}
+	
+}

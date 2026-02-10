@@ -1,0 +1,8 @@
+package clases;
+
+public abstract class  Entidad{
+	
+	private int cantidadVida;
+	private int cantidadAtaque;
+	
+}

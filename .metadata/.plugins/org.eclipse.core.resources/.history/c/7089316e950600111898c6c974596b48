@@ -1,0 +1,6 @@
+package clases;
+
+public class Equipamiento {
+	private String nombre;
+	private int cantVidaAumenta;
+}

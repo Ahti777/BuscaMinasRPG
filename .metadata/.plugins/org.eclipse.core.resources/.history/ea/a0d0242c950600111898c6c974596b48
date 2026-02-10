@@ -1,0 +1,29 @@
+package clases;
+/**
+ * @Autor Danilo José Mendez Mendez
+ *@version 10/02/2026
+ */
+import java.util.ArrayList;
+
+public class Heroe extends Entidad{
+	/**
+	 * 
+	 */
+	private int cantidadExperiencia;
+	private ArrayList<Equipamiento>miEquipamiento;
+	private ArrayList<Ataque>listaAtaques;
+	/**
+	 * @param cantidadExperiencia
+	 * @param miEquipamiento
+	 * @param listaAtaques
+	 */
+	public Heroe(int cantidadExperiencia, ArrayList<Equipamiento> miEquipamiento, ArrayList<Ataque> listaAtaques) {
+		super();
+		this.cantidadExperiencia = cantidadExperiencia;
+		this.miEquipamiento = miEquipamiento;
+		this.listaAtaques = listaAtaques;
+	}
+	
+	
+	
+}

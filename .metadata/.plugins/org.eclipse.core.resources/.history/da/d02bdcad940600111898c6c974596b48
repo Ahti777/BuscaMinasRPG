@@ -1,0 +1,11 @@
+package clases;
+
+import java.util.ArrayList;
+
+public class Heroe extends Entidad{
+
+	private int cantidadExperiencia;
+	private ArrayList<Equipamiento>miEquipamiento;
+	private ArrayList<Ataque>listaAtaques;
+	
+}

@@ -1,0 +1,23 @@
+package clases;
+/**
+ * @Autor Danilo José Mendez Mendez
+ *@version 10/02/2026
+ */
+import java.util.ArrayList;
+
+public class Usuario {
+	
+	private String nombre;
+	
+	private ArrayList<Partida>misPartidas;
+	
+	
+	public void crearPartida() {
+		this.misPartidas= misPartidas;
+	}
+	
+	public void eliminarPartida() {
+		this.misPartidas=misPartidas;
+		
+	}
+}

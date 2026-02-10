@@ -1,0 +1,21 @@
+package clases;
+/**
+ * @Autor Danilo José Mendez Mendez
+ *@version 10/02/2026
+ */
+public abstract class Entidad{
+	
+	protected int cantidadVida;
+	protected int cantidadAtaque;
+	/**
+	 * @param cantidadVida
+	 * @param cantidadAtaque
+	 */
+	public Entidad(int cantidadVida, int cantidadAtaque) {
+		super();
+		this.cantidadVida = cantidadVida;
+		this.cantidadAtaque = cantidadAtaque;
+	}
+	
+	
+}

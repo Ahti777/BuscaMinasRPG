@@ -19,7 +19,7 @@
 	<section name="JavaElementSearchActions">
 	</section>
 	<section name="NewPackageCreationWizard.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="981"/>
+		<item key="DIALOG_X_ORIGIN" value="432"/>
 		<item key="DIALOG_Y_ORIGIN" value="407"/>
 		<item key="DIALOG_WIDTH" value="535"/>
 		<item key="DIALOG_HEIGHT" value="509"/>
@@ -37,6 +37,8 @@
 		<item key="EmptyDefaultAssistCategory" value="false"/>
 	</section>
 	<section name="completion_proposal_size">
+		<item key="contextSelector.size.x" value="331"/>
+		<item key="contextSelector.size.y" value="221"/>
 	</section>
 	<section name="quick_assist_proposal_size">
 	</section>
@@ -44,11 +46,11 @@
 		<item key="create_package_info_java" value="false"/>
 	</section>
 	<section name="NewClassCreationWizard.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="981"/>
-		<item key="DIALOG_Y_ORIGIN" value="249"/>
-		<item key="DIALOG_WIDTH" value="613"/>
-		<item key="DIALOG_HEIGHT" value="682"/>
-		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		<item key="DIALOG_X_ORIGIN" value="263"/>
+		<item key="DIALOG_Y_ORIGIN" value="219"/>
+		<item key="DIALOG_WIDTH" value="591"/>
+		<item key="DIALOG_HEIGHT" value="659"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 	<section name="NewClassWizardPage">
 		<item key="create_constructor" value="false"/>
@@ -75,29 +77,39 @@
 		<item key="OmitCallToSuper" value="false"/>
 	</section>
 	<section name="DialogBounds_GenerateConstructorUsingFieldsSelectionDialog">
-		<item key="DIALOG_X_ORIGIN" value="991"/>
-		<item key="DIALOG_Y_ORIGIN" value="210"/>
-		<item key="DIALOG_WIDTH" value="592"/>
-		<item key="DIALOG_HEIGHT" value="740"/>
-		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		<item key="DIALOG_X_ORIGIN" value="202"/>
+		<item key="DIALOG_Y_ORIGIN" value="354"/>
+		<item key="DIALOG_WIDTH" value="519"/>
+		<item key="DIALOG_HEIGHT" value="678"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 	<section name="SourceActionDialog.methods">
 		<item key="VisibilityModifier" value="1"/>
 		<item key="FinalModifier" value="false"/>
 		<item key="SynchronizedModifier" value="false"/>
-		<item key="Comments" value="false"/>
+		<item key="Comments" value="true"/>
 	</section>
 	<section name="AddGetterSetterDialog">
 		<item key="SortOrdering" value="false"/>
 		<item key="RemoveFinal" value="false"/>
 	</section>
 	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
-		<item key="DIALOG_X_ORIGIN" value="991"/>
+		<item key="DIALOG_X_ORIGIN" value="439"/>
 		<item key="DIALOG_Y_ORIGIN" value="199"/>
-		<item key="DIALOG_WIDTH" value="592"/>
-		<item key="DIALOG_HEIGHT" value="756"/>
-		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		<item key="DIALOG_WIDTH" value="528"/>
+		<item key="DIALOG_HEIGHT" value="696"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 	<section name="RenameInformationPopup">
+	</section>
+	<section name="AddUnimplementedConstructorsDialog">
+		<item key="OmitCallToSuper" value="false"/>
+	</section>
+	<section name="DialogBounds_AddUnimplementedConstructorsDialog">
+		<item key="DIALOG_X_ORIGIN" value="228"/>
+		<item key="DIALOG_Y_ORIGIN" value="101"/>
+		<item key="DIALOG_WIDTH" value="519"/>
+		<item key="DIALOG_HEIGHT" value="627"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 </section>
