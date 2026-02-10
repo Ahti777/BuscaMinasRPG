@@ -28,7 +28,7 @@ public class BuscaMinasVistaConsola implements BuscaMinasVista {
 	@Override
 	public int pedirColumna() {
 		Scanner teclado = new Scanner(System.in);
-		System.out.println("Qué cantidad de columnas va a tener la tabla?");
+		System.out.println("Qué cantidad de Kolumnas va a tener la tabla?");
 		return teclado.nextInt();
 	}
 
