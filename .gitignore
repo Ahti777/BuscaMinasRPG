@@ -1,0 +1,7 @@
+.metadata/
+.recommenders/
+bin/
+*.class
+
+Thumbs.bd
+-DS_Store
