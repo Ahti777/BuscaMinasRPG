@@ -93,6 +93,7 @@ public class Tabla {
 	 * 
 	 * @param fila
 	 * @param columna
+	 * RECORDATORIO DE QUE ESTÁ FATAL ESTA PARTE
 	 */
 	public void calcularNumeroMinas(int fila, int columna) {
 		Celda[][] copiaMapaCeldas = getMapaCeldas();

@@ -2,6 +2,9 @@ package controlador;
 
 import java.util.Scanner;
 
+import clases.Entidad;
+import clases.Heroe;
+import clases.Monstruo;
 import clases.Tabla;
 import vista.BuscaMinasVistaConsola;
 
@@ -16,7 +19,6 @@ public class BuscaMinasControlador {
 	public BuscaMinasControlador() {
 		super();
 	}
-
 	public void iniciarJuego() {
 		Scanner teclado = new Scanner(System.in);
 		BuscaMinasVistaConsola vistaConsola = new BuscaMinasVistaConsola();
@@ -66,6 +68,38 @@ public class BuscaMinasControlador {
 			}
 		} while (condicion);
 		teclado.close();
+	}
+	
+	private void combateEnemigo(Heroe usoHeroe, Entidad usoMonstruoJarron) {
+		/**
+		 * 
+		 */
+		Scanner teclado = new Scanner(System.in);
+		BuscaMinasVistaConsola vistaConsola = new BuscaMinasVistaConsola();
+		int ataqueElegido;
+		do {
+			ataqueElegido=0;
+			vistaConsola.mostrarMensaje("El turno del heroe ha comenzado.");
+			vistaConsola.mostrarMensaje("Lista de ataques: ");
+			vistaConsola.mostrarMensaje(usoHeroe.getListaAtaques().toString());
+			ataqueElegido = teclado.nextInt();
+			usoMonstruoJarron.setCantidadVida(usoMonstruoJarron.getCantidadVida()-calcularDañoAtaque(usoHeroe, ataqueElegido));
+			if(usoMonstruoJarron instanceof Monstruo) {
+				System.out.println("Es el turno del monstruo");
+			}else {
+				System.out.println("El jarrón está tieso");
+			}
+			
+		}while(usoHeroe.getCantidadVida()>0 || usoMonstruoJarron.getCantidadVida()>0);
+	}
+	/**
+	 * 
+	 * @param usoHeroe
+	 * @param n
+	 * @return
+	 */
+	private int calcularDañoAtaque(Heroe usoHeroe, int n) {
+		return (int) (usoHeroe.getCantidadAtaque()*usoHeroe.getListaAtaques().get(n).getEscaladoDaño())+1;
 	}
 
 }

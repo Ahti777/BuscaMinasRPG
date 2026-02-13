@@ -62,6 +62,5 @@ public class Heroe extends Entidad{
 	public void setListaAtaques(ArrayList<Ataque> listaAtaques) {
 		this.listaAtaques = listaAtaques;
 	}
-	
 
 }
