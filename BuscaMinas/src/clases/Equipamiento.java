@@ -1,7 +1,7 @@
 package clases;
 /**
- * @Autor Danilo José Mendez Mendez
- *@version 10/02/2026
+ * @Autor Danilo José Mendez Mendez/Artem Zimin Litvak
+ *@version 14/02/2026
  */
 public class Equipamiento {
 	

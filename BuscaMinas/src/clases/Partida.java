@@ -1,16 +1,19 @@
 package clases;
+
 /**
  * @Autor Danilo José Mendez Mendez
- *@version 10/02/2026
+ * @version 10/02/2026
  */
 public class Partida {
 	private String nombre;
+	private int id;
 
 	/**
 	 * @param nombre
 	 */
-	public Partida(String nombre) {
+	public Partida(int id, String nombre) {
 		super();
+		this.id = id;
 		this.nombre = nombre;
 	}
 
@@ -27,5 +30,18 @@ public class Partida {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	@Override
+	public String toString() {
+		return "Partida{" + "id= " + id + ", nombre='" + nombre + '\'' + '}';
+	}
+
 }

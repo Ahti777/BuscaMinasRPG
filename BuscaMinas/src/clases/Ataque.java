@@ -5,14 +5,14 @@ package clases;
  */
 public class Ataque {
 	private String nombre;
-	private int cantidadAcierto;
+	private double cantidadAcierto;
 	private double escaladoDaño;
 	/**
 	 * @param nombre
 	 * @param cantidadAcierto
 	 * @param escaladoDaño
 	 */
-	public Ataque(String nombre, int cantidadAcierto, double escaladoDaño) {
+	public Ataque(String nombre, double cantidadAcierto, double escaladoDaño) {
 		this.nombre = nombre;
 		this.cantidadAcierto = cantidadAcierto;
 		this.escaladoDaño = escaladoDaño;
@@ -32,7 +32,7 @@ public class Ataque {
 	/**
 	 * @return the cantidadAcierto
 	 */
-	public int getCantidadAcierto() {
+	public double getCantidadAcierto() {
 		return cantidadAcierto;
 	}
 	/**

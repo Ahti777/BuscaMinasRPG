@@ -1,8 +1,12 @@
 package controlador;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Scanner;
 
+import clases.Ataque;
 import clases.Entidad;
+import clases.Equipamiento;
 import clases.Heroe;
 import clases.Monstruo;
 import clases.Tabla;
@@ -29,6 +33,13 @@ public class BuscaMinasControlador {
 		Tabla usoTabla = new Tabla(filas, columnas);
 		boolean condicion = true;
 		boolean perder = false;
+		ArrayList<Ataque> listaAtaques = null;
+		ArrayList<Equipamiento> listaEquipamientos = null;
+		Heroe usoHeroe = new Heroe(10,4,0,listaEquipamientos,listaAtaques);
+		/**
+		 * PREUBA
+		 */
+		Monstruo usoEnemigo = new Monstruo(10, 4);
 		int opcionMenu;
 
 		do {
@@ -54,10 +65,12 @@ public class BuscaMinasControlador {
 					/**
 					 * 
 					 */
-					if (usoTabla.getMapaCeldas()[filaElegida][columnaElegida].isTieneMina()) {
+					if (usoTabla.getMapaCeldas()[filaElegida][columnaElegida].isTieneMina() || usoHeroe.getCantidadVida()==0) {
 						perder = true;
 						vistaConsola.mostrarMensaje("Has perdido");
 						vistaConsola.mostrarTablaVisible(usoTabla);
+					}else if(usoTabla.getMapaCeldas()[filaElegida][columnaElegida].isTieneJarron() || usoTabla.getMapaCeldas()[filaElegida][columnaElegida].isTieneMonstruo()) {
+						combateEnemigo(usoHeroe, usoEnemigo);
 					}
 
 				} while (!perder);
@@ -83,7 +96,7 @@ public class BuscaMinasControlador {
 			vistaConsola.mostrarMensaje("Lista de ataques: ");
 			vistaConsola.mostrarMensaje(usoHeroe.getListaAtaques().toString());
 			ataqueElegido = teclado.nextInt();
-			usoMonstruoJarron.setCantidadVida(usoMonstruoJarron.getCantidadVida()-calcularDañoAtaque(usoHeroe, ataqueElegido));
+			usoMonstruoJarron.setCantidadVida(usoMonstruoJarron.getCantidadVida()-usoHeroe.calcularDañoAtaque(usoHeroe, ataqueElegido));
 			if(usoMonstruoJarron instanceof Monstruo) {
 				System.out.println("Es el turno del monstruo");
 			}else {
@@ -92,14 +105,6 @@ public class BuscaMinasControlador {
 			
 		}while(usoHeroe.getCantidadVida()>0 || usoMonstruoJarron.getCantidadVida()>0);
 	}
-	/**
-	 * 
-	 * @param usoHeroe
-	 * @param n
-	 * @return
-	 */
-	private int calcularDañoAtaque(Heroe usoHeroe, int n) {
-		return (int) (usoHeroe.getCantidadAtaque()*usoHeroe.getListaAtaques().get(n).getEscaladoDaño())+1;
-	}
+	
 
 }

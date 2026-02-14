@@ -3098,3 +3098,818 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2026-02-14 06:52:46.060 -----------------------------------------------
+eclipse.buildId=4.39.0.20260129-0236
+java.version=21.0.8
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY ch.qos.logback.classic 1 0 2026-02-14 06:52:55.804
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2026-02-14 06:53:16.473
+!MESSAGE Logback config file: C:\Users\artem\Desktop\buscaMinas\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.7.101.20251017-1242.xml
+
+!ENTRY org.eclipse.ui 2 0 2026-02-14 06:53:18.006
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2026-02-14 06:53:18.006
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.papyrus.designer.realtime.pycpa.ui', id='org.eclipse.papyrus.designer.realtime.pycpa.command', categoryId='org.eclipse.papyrus.editor.category'
+!SUBENTRY 1 org.eclipse.ui 2 0 2026-02-14 06:53:18.006
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.papyrus.infra.ui.emf', id='org.eclipse.papyrus.infra.emf.readonly.EnableWriteCommand', categoryId='org.eclipse.papyrus.editor.category'
+!SUBENTRY 1 org.eclipse.ui 2 0 2026-02-14 06:53:18.006
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.papyrus.uml.diagram.activity', id='org.eclipse.papyrus.uml.diagram.activity.CreateActivityDiagramCommand', categoryId='org.eclipse.papyrus.editor.category'
+!SUBENTRY 1 org.eclipse.ui 2 0 2026-02-14 06:53:18.006
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.papyrus.uml.diagram.common', id='org.eclipse.papyrus.uml.diagram.commands.LoadResourceAction', categoryId='org.eclipse.papyrus.editor.category'
+!SUBENTRY 1 org.eclipse.ui 2 0 2026-02-14 06:53:18.006
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.papyrus.uml.diagram.common', id='org.eclipse.papyrus.uml.diagram.common.commands.Load', categoryId='org.eclipse.papyrus.editor.category'
+!SUBENTRY 1 org.eclipse.ui 2 0 2026-02-14 06:53:18.006
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.papyrus.uml.diagram.common', id='org.eclipse.papyrus.uml.diagram.common.commands.Unload', categoryId='org.eclipse.papyrus.editor.category'
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2026-02-14 06:53:18.786
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://org.eclipse.papyrus.infra.ui.fonts/org.eclipse.papyrus.infra.ui.fonts.internal.addon.FontAddon
+
+!ENTRY org.eclipse.egit.ui 2 0 2026-02-14 06:53:38.560
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\artem'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2026-02-14 13:57:37.763 -----------------------------------------------
+eclipse.buildId=4.39.0.20260129-0236
+java.version=21.0.8
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY ch.qos.logback.classic 1 0 2026-02-14 13:57:52.991
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.core.resources 2 10035 2026-02-14 13:58:14.487
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY ch.qos.logback.classic 1 0 2026-02-14 13:58:16.031
+!MESSAGE Logback config file: C:\Users\artem\Desktop\buscaMinas\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.7.101.20251017-1242.xml
+
+!ENTRY org.eclipse.ui 2 0 2026-02-14 13:58:17.375
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2026-02-14 13:58:17.375
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.papyrus.designer.realtime.pycpa.ui', id='org.eclipse.papyrus.designer.realtime.pycpa.command', categoryId='org.eclipse.papyrus.editor.category'
+!SUBENTRY 1 org.eclipse.ui 2 0 2026-02-14 13:58:17.375
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.papyrus.infra.ui.emf', id='org.eclipse.papyrus.infra.emf.readonly.EnableWriteCommand', categoryId='org.eclipse.papyrus.editor.category'
+!SUBENTRY 1 org.eclipse.ui 2 0 2026-02-14 13:58:17.375
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.papyrus.uml.diagram.activity', id='org.eclipse.papyrus.uml.diagram.activity.CreateActivityDiagramCommand', categoryId='org.eclipse.papyrus.editor.category'
+!SUBENTRY 1 org.eclipse.ui 2 0 2026-02-14 13:58:17.375
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.papyrus.uml.diagram.common', id='org.eclipse.papyrus.uml.diagram.commands.LoadResourceAction', categoryId='org.eclipse.papyrus.editor.category'
+!SUBENTRY 1 org.eclipse.ui 2 0 2026-02-14 13:58:17.375
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.papyrus.uml.diagram.common', id='org.eclipse.papyrus.uml.diagram.common.commands.Load', categoryId='org.eclipse.papyrus.editor.category'
+!SUBENTRY 1 org.eclipse.ui 2 0 2026-02-14 13:58:17.375
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.papyrus.uml.diagram.common', id='org.eclipse.papyrus.uml.diagram.common.commands.Unload', categoryId='org.eclipse.papyrus.editor.category'
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2026-02-14 13:58:17.946
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://org.eclipse.papyrus.infra.ui.fonts/org.eclipse.papyrus.infra.ui.fonts.internal.addon.FontAddon
+
+!ENTRY org.eclipse.egit.ui 2 0 2026-02-14 13:58:36.604
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\artem'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jdt.core 4 4 2026-02-14 13:58:37.457
+!MESSAGE Error occurred while deleting: /BuscaMinas/bin/app
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:839)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:179)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:104)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:314)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:226)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1109)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:299)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:355)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:449)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:452)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:564)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:512)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:594)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:208)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:309)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Could not delete '/BuscaMinas/bin/app'.
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:434)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:373)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:832)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1917)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:826)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:179)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:104)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:314)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:226)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1109)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:299)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:355)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:449)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:452)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:564)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:512)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:594)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:208)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:309)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Could not delete: C:\Users\artem\Desktop\buscaMinas\BuscaMinas\bin\app.
+java.nio.file.AccessDeniedException: C:\Users\artem\Desktop\buscaMinas\BuscaMinas\bin\app
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:89)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:273)
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:110)
+	at java.base/java.nio.file.Files.deleteIfExists(Files.java:1192)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:312)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:203)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:67)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:169)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:128)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:431)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:373)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:832)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1917)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:826)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:179)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:104)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:314)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:226)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1109)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:299)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:355)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:449)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:452)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:564)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:512)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:594)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:208)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:309)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2026-02-14 13:58:37.463
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.eclipse.core.resources 4 273 2026-02-14 13:58:37.463
+!MESSAGE Could not delete '/BuscaMinas/bin/app'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:434)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:373)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:832)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1917)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:826)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:179)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:104)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:314)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:226)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1109)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:299)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:355)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:449)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:452)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:564)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:512)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:594)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:208)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:309)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Could not delete: C:\Users\artem\Desktop\buscaMinas\BuscaMinas\bin\app.
+java.nio.file.AccessDeniedException: C:\Users\artem\Desktop\buscaMinas\BuscaMinas\bin\app
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:89)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:273)
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:110)
+	at java.base/java.nio.file.Files.deleteIfExists(Files.java:1192)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:312)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:203)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:67)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:169)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:128)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:431)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:373)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:832)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1917)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:826)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:179)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:104)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:314)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:226)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1109)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:299)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:355)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:449)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:452)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:564)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:512)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:594)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:208)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:309)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 3 org.eclipse.core.resources 4 273 2026-02-14 13:58:37.464
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 4 org.eclipse.core.filesystem 4 273 2026-02-14 13:58:37.464
+!MESSAGE Could not delete: C:\Users\artem\Desktop\buscaMinas\BuscaMinas\bin\app.
+!STACK 0
+java.nio.file.AccessDeniedException: C:\Users\artem\Desktop\buscaMinas\BuscaMinas\bin\app
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:89)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:273)
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:110)
+	at java.base/java.nio.file.Files.deleteIfExists(Files.java:1192)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:312)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:203)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:67)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:169)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:128)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:431)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:373)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:832)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1917)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:826)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:179)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:104)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:314)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:226)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1109)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:299)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:355)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:449)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:452)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:564)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:512)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:594)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:208)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:309)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 4 2026-02-14 13:58:37.474
+!MESSAGE Error occurred while deleting: /BuscaMinas/bin/clases
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:839)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:179)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:104)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:314)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:226)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1109)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:299)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:355)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:449)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:452)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:564)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:512)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:594)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:208)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:309)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Could not delete '/BuscaMinas/bin/clases'.
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:434)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:373)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:832)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1917)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:826)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:179)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:104)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:314)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:226)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1109)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:299)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:355)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:449)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:452)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:564)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:512)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:594)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:208)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:309)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Could not delete: C:\Users\artem\Desktop\buscaMinas\BuscaMinas\bin\clases.
+java.nio.file.AccessDeniedException: C:\Users\artem\Desktop\buscaMinas\BuscaMinas\bin\clases
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:89)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:273)
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:110)
+	at java.base/java.nio.file.Files.deleteIfExists(Files.java:1192)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:312)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:203)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:67)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:169)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:128)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:431)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:373)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:832)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1917)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:826)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:179)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:104)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:314)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:226)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1109)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:299)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:355)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:449)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:452)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:564)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:512)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:594)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:208)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:309)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2026-02-14 13:58:37.476
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.eclipse.core.resources 4 273 2026-02-14 13:58:37.476
+!MESSAGE Could not delete '/BuscaMinas/bin/clases'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:434)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:373)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:832)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1917)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:826)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:179)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:104)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:314)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:226)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1109)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:299)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:355)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:449)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:452)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:564)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:512)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:594)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:208)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:309)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Could not delete: C:\Users\artem\Desktop\buscaMinas\BuscaMinas\bin\clases.
+java.nio.file.AccessDeniedException: C:\Users\artem\Desktop\buscaMinas\BuscaMinas\bin\clases
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:89)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:273)
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:110)
+	at java.base/java.nio.file.Files.deleteIfExists(Files.java:1192)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:312)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:203)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:67)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:169)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:128)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:431)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:373)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:832)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1917)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:826)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:179)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:104)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:314)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:226)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1109)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:299)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:355)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:449)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:452)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:564)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:512)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:594)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:208)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:309)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 3 org.eclipse.core.resources 4 273 2026-02-14 13:58:37.477
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 4 org.eclipse.core.filesystem 4 273 2026-02-14 13:58:37.477
+!MESSAGE Could not delete: C:\Users\artem\Desktop\buscaMinas\BuscaMinas\bin\clases.
+!STACK 0
+java.nio.file.AccessDeniedException: C:\Users\artem\Desktop\buscaMinas\BuscaMinas\bin\clases
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:89)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:273)
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:110)
+	at java.base/java.nio.file.Files.deleteIfExists(Files.java:1192)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:312)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:203)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:67)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:169)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:128)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:431)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:373)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:832)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1917)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:826)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:179)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:104)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:314)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:226)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1109)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:299)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:355)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:449)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:452)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:564)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:512)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:594)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:208)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:309)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 4 2026-02-14 13:58:37.485
+!MESSAGE Error occurred while deleting: /BuscaMinas/bin/controlador
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:839)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:179)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:104)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:314)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:226)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1109)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:299)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:355)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:449)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:452)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:564)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:512)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:594)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:208)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:309)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Could not delete '/BuscaMinas/bin/controlador'.
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:434)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:373)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:832)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1917)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:826)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:179)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:104)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:314)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:226)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1109)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:299)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:355)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:449)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:452)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:564)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:512)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:594)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:208)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:309)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Could not delete: C:\Users\artem\Desktop\buscaMinas\BuscaMinas\bin\controlador.
+java.nio.file.AccessDeniedException: C:\Users\artem\Desktop\buscaMinas\BuscaMinas\bin\controlador
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:89)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:273)
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:110)
+	at java.base/java.nio.file.Files.deleteIfExists(Files.java:1192)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:312)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:203)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:67)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:169)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:128)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:431)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:373)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:832)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1917)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:826)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:179)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:104)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:314)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:226)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1109)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:299)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:355)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:449)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:452)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:564)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:512)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:594)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:208)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:309)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2026-02-14 13:58:37.487
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.eclipse.core.resources 4 273 2026-02-14 13:58:37.487
+!MESSAGE Could not delete '/BuscaMinas/bin/controlador'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:434)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:373)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:832)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1917)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:826)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:179)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:104)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:314)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:226)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1109)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:299)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:355)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:449)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:452)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:564)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:512)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:594)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:208)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:309)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Could not delete: C:\Users\artem\Desktop\buscaMinas\BuscaMinas\bin\controlador.
+java.nio.file.AccessDeniedException: C:\Users\artem\Desktop\buscaMinas\BuscaMinas\bin\controlador
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:89)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:273)
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:110)
+	at java.base/java.nio.file.Files.deleteIfExists(Files.java:1192)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:312)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:203)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:67)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:169)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:128)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:431)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:373)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:832)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1917)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:826)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:179)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:104)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:314)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:226)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1109)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:299)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:355)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:449)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:452)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:564)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:512)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:594)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:208)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:309)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 3 org.eclipse.core.resources 4 273 2026-02-14 13:58:37.488
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 4 org.eclipse.core.filesystem 4 273 2026-02-14 13:58:37.488
+!MESSAGE Could not delete: C:\Users\artem\Desktop\buscaMinas\BuscaMinas\bin\controlador.
+!STACK 0
+java.nio.file.AccessDeniedException: C:\Users\artem\Desktop\buscaMinas\BuscaMinas\bin\controlador
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:89)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:273)
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:110)
+	at java.base/java.nio.file.Files.deleteIfExists(Files.java:1192)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:312)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:203)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:67)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:169)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:128)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:431)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:373)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:832)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1917)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:826)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:179)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:104)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:314)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:226)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1109)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:299)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:355)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:449)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:452)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:564)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:512)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:594)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:208)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:309)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 4 2026-02-14 13:58:37.495
+!MESSAGE Error occurred while deleting: /BuscaMinas/bin/vista
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:839)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:179)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:104)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:314)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:226)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1109)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:299)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:355)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:449)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:452)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:564)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:512)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:594)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:208)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:309)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Could not delete '/BuscaMinas/bin/vista'.
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:434)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:373)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:832)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1917)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:826)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:179)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:104)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:314)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:226)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1109)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:299)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:355)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:449)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:452)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:564)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:512)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:594)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:208)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:309)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Could not delete: C:\Users\artem\Desktop\buscaMinas\BuscaMinas\bin\vista.
+java.nio.file.AccessDeniedException: C:\Users\artem\Desktop\buscaMinas\BuscaMinas\bin\vista
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:89)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:273)
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:110)
+	at java.base/java.nio.file.Files.deleteIfExists(Files.java:1192)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:312)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:203)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:67)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:169)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:128)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:431)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:373)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:832)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1917)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:826)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:179)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:104)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:314)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:226)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1109)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:299)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:355)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:449)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:452)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:564)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:512)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:594)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:208)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:309)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2026-02-14 13:58:37.497
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.eclipse.core.resources 4 273 2026-02-14 13:58:37.497
+!MESSAGE Could not delete '/BuscaMinas/bin/vista'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:434)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:373)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:832)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1917)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:826)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:179)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:104)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:314)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:226)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1109)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:299)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:355)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:449)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:452)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:564)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:512)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:594)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:208)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:309)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Could not delete: C:\Users\artem\Desktop\buscaMinas\BuscaMinas\bin\vista.
+java.nio.file.AccessDeniedException: C:\Users\artem\Desktop\buscaMinas\BuscaMinas\bin\vista
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:89)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:273)
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:110)
+	at java.base/java.nio.file.Files.deleteIfExists(Files.java:1192)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:312)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:203)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:67)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:169)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:128)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:431)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:373)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:832)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1917)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:826)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:179)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:104)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:314)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:226)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1109)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:299)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:355)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:449)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:452)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:564)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:512)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:594)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:208)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:309)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 3 org.eclipse.core.resources 4 273 2026-02-14 13:58:37.498
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 4 org.eclipse.core.filesystem 4 273 2026-02-14 13:58:37.499
+!MESSAGE Could not delete: C:\Users\artem\Desktop\buscaMinas\BuscaMinas\bin\vista.
+!STACK 0
+java.nio.file.AccessDeniedException: C:\Users\artem\Desktop\buscaMinas\BuscaMinas\bin\vista
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:89)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:273)
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:110)
+	at java.base/java.nio.file.Files.deleteIfExists(Files.java:1192)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:312)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:203)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:67)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:169)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:128)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:431)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:373)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:832)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1917)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:826)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:179)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:104)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:314)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:226)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1109)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:299)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:355)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:449)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:452)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:564)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:512)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:594)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:208)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:309)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)

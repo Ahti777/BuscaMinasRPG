@@ -39,7 +39,11 @@ public class BuscaMinasVistaConsola implements BuscaMinasVista {
 				if (usoTabla.getMapaCeldas()[i][t].isVisible()) {
 					if (usoTabla.getMapaCeldas()[i][t].isTieneMina()) {
 						System.out.print("X ");
-					} else {
+					}else if(usoTabla.getMapaCeldas()[i][t].isTieneJarron()) {
+						System.out.print("U ");
+					}else if(usoTabla.getMapaCeldas()[i][t].isTieneMonstruo()) {
+						System.out.print(" ");
+					}else {
 						usoTabla.calcularNumeroMinas(i, t);
 						System.out.print(usoTabla.getMapaCeldas()[i][t].getNumero() + " ");
 					}

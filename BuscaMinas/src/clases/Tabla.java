@@ -2,7 +2,7 @@ package clases;
 
 /**
  * @author artem
- * @version 1.0 01-02-2026
+ * @version 2.0 14/02/2026
  */
 public class Tabla {
 	/**
@@ -60,9 +60,29 @@ public class Tabla {
 	 */
 	private Celda[][] generarTablero() {
 		Celda[][] copiaMapaCeldas = getMapaCeldas();
+		boolean tieneMina;
+		boolean tieneJarron;
+		boolean tieneMonstruo;
 		for (int i = 0; mapaCeldas.length > i; i++) {
 			for (int t = 0; mapaCeldas[i].length > t; t++) {
-				copiaMapaCeldas[i][t] = new Celda(generarMinas(), false);
+				
+				tieneMina=false;
+				tieneJarron=false;
+				tieneMonstruo=false;
+				/**
+				 * Elige si la celda es una mina un jarron un monstruo o está vacía (es un apaño que no es muy clean)
+				 */
+				if (tieneMina = generarMinas()) {
+					copiaMapaCeldas[i][t] = new Celda(generarMinas(), false, false, false);
+				} else {
+					if (tieneJarron = generarJarron()) {
+						copiaMapaCeldas[i][t] = new Celda(false, false, generarJarron(), false);
+					}else if(tieneMonstruo=generarMonstruo()) {
+						copiaMapaCeldas[i][t] = new Celda(false, generarMonstruo(), false, false);
+					}else {
+						copiaMapaCeldas[i][t] = new Celda(false, false, false, false);
+					}
+				}
 			}
 		}
 		return copiaMapaCeldas;
@@ -73,6 +93,7 @@ public class Tabla {
 	 * 
 	 * @return boolean
 	 */
+
 	private boolean generarMinas() {
 		/**
 		 * RATIO_APARICION_MINAS: es el porcentaje de aoparicion de las minas
@@ -89,11 +110,43 @@ public class Tabla {
 
 	}
 
+	private boolean generarMonstruo() {
+		/**
+		 * 
+		 */
+		final int RATIO_APARICION_MONSTRUO = 18;
+		/**
+		 * Calcula el porcentaje de aparición de un mosntruo y esto solo puede suceder
+		 * si no existe jarrón
+		 */
+		if ((Math.random() * 100) + 1 <= RATIO_APARICION_MONSTRUO) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	private boolean generarJarron() {
+		/**
+		 * 
+		 */
+		final int RATIO_APARICION_JARRON = 28;
+		/**
+		 * Calcula el porcentaje de aparición de un mosntruo y esto solo puede suceder
+		 * si no existe jarrón
+		 */
+		if ((Math.random() * 100) + 1 <= RATIO_APARICION_JARRON) {
+			return true;
+		} else {
+			return false;
+		}
+
+	}
+
 	/**
 	 * 
 	 * @param fila
-	 * @param columna
-	 * RECORDATORIO DE QUE ESTÁ FATAL ESTA PARTE
+	 * @param columna RECORDATORIO DE QUE ESTÁ FATAL ESTA PARTE
 	 */
 	public void calcularNumeroMinas(int fila, int columna) {
 		Celda[][] copiaMapaCeldas = getMapaCeldas();
@@ -109,5 +162,6 @@ public class Tabla {
 		setMapaCeldas(copiaMapaCeldas);
 
 	}
+	
 
 }
