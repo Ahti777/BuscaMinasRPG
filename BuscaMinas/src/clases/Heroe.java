@@ -1,10 +1,11 @@
 package clases;
 
 /**
- * @Autor Danilo José Mendez Mendez, Artem Zimin Litvak
- *@version 14/02/2026
+ * @Autor Artem Zimin Litvak
+ *@version 17/02/2026
  */
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Heroe extends Entidad {
 	/**
@@ -84,20 +85,37 @@ public class Heroe extends Entidad {
 	public void subirNivel() {
 		/**
 		 * RECORDAR: ESTO SON DATOS DE PRUEBA. NO APARECERAN EN LA VERSIÓN DE VERDAD
-		 * RECORDAR: ESTO VA A CREAR INDEFINIDAMENTE 
 		 */
+		ArrayList<Ataque> copiaListaAtaques = listaAtaques;
+		Ataque ceroNivel = new Ataque("Tajo", 0.0, 1);
 		Ataque primerNivel = new Ataque("Golpe ascendente con backflip", 0.20, 1.2);
 		Ataque segundoNivel = new Ataque("Golpe ascendente con baile", 0.20, 1.2);
 		Ataque terceroNivel = new Ataque("Golpe mediante una mona china frigorifico", 0.20, 1.2);
-		if (cantidadExperiencia >= 3) {
-			listaAtaques.add(primerNivel);
-		} else if (cantidadExperiencia >= 6) {
-			listaAtaques.add(segundoNivel);
-		} else if (cantidadExperiencia >= 10) {
-			listaAtaques.add(terceroNivel);
-		} else if(cantidadExperiencia>=0) {
-			
+		if (cantidadExperiencia == 3) {
+			copiaListaAtaques.add(primerNivel);
+		} else if (cantidadExperiencia == 6) {
+			copiaListaAtaques.add(segundoNivel);
+		} else if (cantidadExperiencia == 10) {
+			copiaListaAtaques.add(terceroNivel);
+		} else if(cantidadExperiencia==0) {
+			copiaListaAtaques.add(ceroNivel);
 		}
+		setListaAtaques(copiaListaAtaques);
+	}
+	
+	public String toStringHeroe() {
+		return cantidadVida+" "+cantidadAtaque+" "+cantidadExperiencia;
+	}
+	
+	public String toStringListaAtaques() {
+		String salida = "";
+		int contador = 0;
+		Iterator<Ataque> it = listaAtaques.iterator();
+		while(it.hasNext()) {
+			Ataque entrada = it.next();
+			salida+=contador+". "+entrada.getNombre()+" Cantidad fallo: "+entrada.getCantidadAcierto()+" Aumento de daño: "+entrada.getEscaladoDaño()+"\n";
+		}
+		return salida;
 	}
 
 }

@@ -1,7 +1,7 @@
 package clases;
 
 /**
- * @Autor Danilo José Mendez Mendez
+ * @Autor Artem Zimin Litvak
  * @version 10/02/2026
  */
 public class Monstruo extends Entidad{
@@ -26,5 +26,6 @@ public class Monstruo extends Entidad{
 	public void ataqueMonstruo(Ataque miAtaque) {
 		
 	}
+	
 	
 }

@@ -1,6 +1,5 @@
 package controlador;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -13,7 +12,8 @@ import clases.Tabla;
 import vista.BuscaMinasVistaConsola;
 
 /**
- * 
+ * @author Artem Zimin Litvak
+ * @version 17/02/2026
  */
 public class BuscaMinasControlador {
 
@@ -33,8 +33,8 @@ public class BuscaMinasControlador {
 		Tabla usoTabla = new Tabla(filas, columnas);
 		boolean condicion = true;
 		boolean perder = false;
-		ArrayList<Ataque> listaAtaques = null;
-		ArrayList<Equipamiento> listaEquipamientos = null;
+		ArrayList<Ataque> listaAtaques = new ArrayList<>();
+		ArrayList<Equipamiento> listaEquipamientos = new ArrayList<>();
 		Heroe usoHeroe = new Heroe(10,4,0,listaEquipamientos,listaAtaques);
 		/**
 		 * PREUBA
@@ -48,13 +48,14 @@ public class BuscaMinasControlador {
 			switch (opcionMenu) {
 			case 0:
 				do {
-					/**
+					
 					vistaConsola.mostrarTablaVisible(usoTabla);
 					vistaConsola.mostrarMensaje("");
-					*/
+					
 					
 					filaElegida = 0;
 					columnaElegida = 0;
+					usoHeroe.subirNivel();
 					
 					vistaConsola.mostrarTabla(usoTabla);
 					vistaConsola.mostrarMensaje("Elige una fila: ");
@@ -92,18 +93,26 @@ public class BuscaMinasControlador {
 		int ataqueElegido;
 		do {
 			ataqueElegido=0;
+			vistaConsola.mostrarMensaje("");
 			vistaConsola.mostrarMensaje("El turno del heroe ha comenzado.");
+			vistaConsola.mostrarMensaje("Vida: "+usoMonstruoJarron.getCantidadVida());
+			
+			vistaConsola.mostrarEstadisticasHeroe(usoHeroe);
+			System.out.println("");
 			vistaConsola.mostrarMensaje("Lista de ataques: ");
-			vistaConsola.mostrarMensaje(usoHeroe.getListaAtaques().toString());
+			vistaConsola.mostrarMensaje(usoHeroe.toStringListaAtaques());
 			ataqueElegido = teclado.nextInt();
 			usoMonstruoJarron.setCantidadVida(usoMonstruoJarron.getCantidadVida()-usoHeroe.calcularDañoAtaque(usoHeroe, ataqueElegido));
 			if(usoMonstruoJarron instanceof Monstruo) {
 				System.out.println("Es el turno del monstruo");
+				vistaConsola.mostrarMensaje("El monstruo va a atacar");
+				usoHeroe.setCantidadVida(usoHeroe.getCantidadVida()-usoMonstruoJarron.getCantidadAtaque());
 			}else {
 				System.out.println("El jarrón está tieso");
 			}
 			
 		}while(usoHeroe.getCantidadVida()>0 || usoMonstruoJarron.getCantidadVida()>0);
+		teclado.close();
 	}
 	
 

@@ -10,4 +10,7 @@
     <fullyQualifiedTypeName name="clases.Entidad"/>
     <fullyQualifiedTypeName name="clases.Heroe"/>
     <fullyQualifiedTypeName name="clases.Monstruo"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="clases.Ataque"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
 </qualifiedTypeNameHistroy>

@@ -2,13 +2,14 @@ package vista;
 
 import java.util.Scanner;
 
+import clases.Heroe;
 import clases.Tabla;
-
+/**
+ * @author Artem Zimin Litvak
+ * @version 17/02/2026
+ */
 public class BuscaMinasVistaConsola implements BuscaMinasVista {
 
-	/**
-	 * 
-	 */
 	public BuscaMinasVistaConsola() {
 		super();
 	}
@@ -18,6 +19,7 @@ public class BuscaMinasVistaConsola implements BuscaMinasVista {
 		System.out.println(texto);
 	}
 
+	@SuppressWarnings("resource")
 	@Override
 	public int pedirFila() {
 		Scanner teclado = new Scanner(System.in);
@@ -25,6 +27,7 @@ public class BuscaMinasVistaConsola implements BuscaMinasVista {
 		return teclado.nextInt();
 	}
 
+	@SuppressWarnings("resource")
 	@Override
 	public int pedirColumna() {
 		Scanner teclado = new Scanner(System.in);
@@ -42,9 +45,8 @@ public class BuscaMinasVistaConsola implements BuscaMinasVista {
 					}else if(usoTabla.getMapaCeldas()[i][t].isTieneJarron()) {
 						System.out.print("U ");
 					}else if(usoTabla.getMapaCeldas()[i][t].isTieneMonstruo()) {
-						System.out.print(" ");
+						System.out.print("M ");
 					}else {
-						usoTabla.calcularNumeroMinas(i, t);
 						System.out.print(usoTabla.getMapaCeldas()[i][t].getNumero() + " ");
 					}
 				} else {
@@ -64,7 +66,6 @@ public class BuscaMinasVistaConsola implements BuscaMinasVista {
 					if (usoTabla.getMapaCeldas()[i][t].isTieneMina()) {
 						System.out.print("X ");
 					} else {
-						usoTabla.calcularNumeroMinas(i, t);
 						System.out.print(usoTabla.getMapaCeldas()[i][t].getNumero() + " ");
 					}
 				} else {
@@ -74,6 +75,11 @@ public class BuscaMinasVistaConsola implements BuscaMinasVista {
 			System.out.println("");
 		}
 
+	}
+	
+	public void mostrarEstadisticasHeroe(Heroe usoHeroe) {
+		System.out.println("Estadísticas Heroe: ");
+		System.out.println("Vida: "+usoHeroe.getCantidadVida()+" Experiencia: "+usoHeroe.getCantidadExperiencia());
 	}
 
 }

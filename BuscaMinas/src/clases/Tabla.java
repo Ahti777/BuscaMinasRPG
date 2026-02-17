@@ -1,8 +1,8 @@
 package clases;
 
 /**
- * @author artem
- * @version 2.0 14/02/2026
+ * @author Artem Zimin Litvak
+ * @version 17/02/2026
  */
 public class Tabla {
 	/**
@@ -27,6 +27,8 @@ public class Tabla {
 		this.columnas = columnas;
 		this.mapaCeldas = new Celda[filas][columnas];
 		this.mapaCeldas = generarTablero();
+		establecerNumeroMinas();
+
 	}
 
 	public int getFilas() {
@@ -58,6 +60,7 @@ public class Tabla {
 	 * 
 	 * @return Celda[][]
 	 */
+	@SuppressWarnings("unused")
 	private Celda[][] generarTablero() {
 		Celda[][] copiaMapaCeldas = getMapaCeldas();
 		boolean tieneMina;
@@ -65,21 +68,22 @@ public class Tabla {
 		boolean tieneMonstruo;
 		for (int i = 0; mapaCeldas.length > i; i++) {
 			for (int t = 0; mapaCeldas[i].length > t; t++) {
-				
-				tieneMina=false;
-				tieneJarron=false;
-				tieneMonstruo=false;
+
+				tieneMina = false;
+				tieneJarron = false;
+				tieneMonstruo = false;
 				/**
-				 * Elige si la celda es una mina un jarron un monstruo o está vacía (es un apaño que no es muy clean)
+				 * Elige si la celda es una mina un jarron un monstruo o está vacía (es un apaño
+				 * que no es muy clean)
 				 */
 				if (tieneMina = generarMinas()) {
 					copiaMapaCeldas[i][t] = new Celda(generarMinas(), false, false, false);
 				} else {
 					if (tieneJarron = generarJarron()) {
 						copiaMapaCeldas[i][t] = new Celda(false, false, generarJarron(), false);
-					}else if(tieneMonstruo=generarMonstruo()) {
+					} else if (tieneMonstruo = generarMonstruo()) {
 						copiaMapaCeldas[i][t] = new Celda(false, generarMonstruo(), false, false);
-					}else {
+					} else {
 						copiaMapaCeldas[i][t] = new Celda(false, false, false, false);
 					}
 				}
@@ -98,7 +102,7 @@ public class Tabla {
 		/**
 		 * RATIO_APARICION_MINAS: es el porcentaje de aoparicion de las minas
 		 */
-		final int RATIO_APARICION_MINAS = 15;
+		final int RATIO_APARICION_MINAS = 40;
 		/**
 		 * Calcula el porcentaje de aparicioó y devuelve un boolean
 		 */
@@ -114,7 +118,7 @@ public class Tabla {
 		/**
 		 * 
 		 */
-		final int RATIO_APARICION_MONSTRUO = 18;
+		final int RATIO_APARICION_MONSTRUO = 40;
 		/**
 		 * Calcula el porcentaje de aparición de un mosntruo y esto solo puede suceder
 		 * si no existe jarrón
@@ -130,7 +134,7 @@ public class Tabla {
 		/**
 		 * 
 		 */
-		final int RATIO_APARICION_JARRON = 28;
+		final int RATIO_APARICION_JARRON = 40;
 		/**
 		 * Calcula el porcentaje de aparición de un mosntruo y esto solo puede suceder
 		 * si no existe jarrón
@@ -148,13 +152,17 @@ public class Tabla {
 	 * @param fila
 	 * @param columna RECORDATORIO DE QUE ESTÁ FATAL ESTA PARTE
 	 */
-	public void calcularNumeroMinas(int fila, int columna) {
+	private void calcularNumeroMinas(int fila, int columna) {
 		Celda[][] copiaMapaCeldas = getMapaCeldas();
 		for (int i = fila - 1; i < fila + 2; i++) {
 			for (int t = columna - 1; t < columna + 2; t++) {
 				if (i >= 0 && i < 8 && t >= 0 && t < 8) {
 					if (getMapaCeldas()[i][t].isTieneMina()) {
+						copiaMapaCeldas[fila][columna].setNumero(copiaMapaCeldas[fila][columna].getNumero() + 10);
+					}else if(getMapaCeldas()[i][t].isTieneMonstruo()) {
 						copiaMapaCeldas[fila][columna].setNumero(copiaMapaCeldas[fila][columna].getNumero() + 1);
+					}else if(getMapaCeldas()[i][t].isTieneJarron()) {
+						copiaMapaCeldas[fila][columna].setNumero(copiaMapaCeldas[fila][columna].getNumero() + 2);
 					}
 				}
 			}
@@ -162,6 +170,18 @@ public class Tabla {
 		setMapaCeldas(copiaMapaCeldas);
 
 	}
-	
 
+	public void establecerNumeroMinas() {
+		for (int i = 0; getMapaCeldas().length > i; i++) {
+			for (int t = 0; getMapaCeldas()[i].length > t; t++) {
+				if (!getMapaCeldas()[i][t].isTieneMina() && !getMapaCeldas()[i][t].isTieneJarron()
+						&& !getMapaCeldas()[i][t].isTieneMonstruo()) {
+					calcularNumeroMinas(i, t);
+
+				}
+
+			}
+
+		}
+	}
 }

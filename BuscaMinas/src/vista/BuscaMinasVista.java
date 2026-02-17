@@ -3,8 +3,8 @@ package vista;
 import clases.Tabla;
 
 /**
- * @author artem
- * @version 1.0 01-02-2026
+ * @author Artem Zimin Litvak
+ * @version 17/02/2026
  */
 public interface BuscaMinasVista {
 	/**

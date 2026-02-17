@@ -1,7 +1,7 @@
 package clases;
 /**
- * @Autor Danilo José Mendez Mendez
- *@version 10/02/2026
+ * @Autor Artem Zimin Litvak
+ *@version 17/02/2026
  */
 public class Ataque {
 	private String nombre;
@@ -52,6 +52,10 @@ public class Ataque {
 	 */
 	public void setEscaladoDaño(double escaladoDaño) {
 		this.escaladoDaño = escaladoDaño;
+	}
+	
+	public String toStringAtaque() {
+		return nombre+" "+cantidadAcierto+" "+escaladoDaño;
 	}
 	
 	
