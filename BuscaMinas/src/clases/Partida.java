@@ -5,15 +5,16 @@ package clases;
  * @version 10/02/2026
  */
 public class Partida {
+	static private int id=0;
 	private String nombre;
-	private int id;
 
 	/**
 	 * @param nombre
+	 * RECORDATORIO: GENERAR ID ÚNICO PARA CADA PARTIDA
 	 */
 	public Partida(int id, String nombre) {
 		super();
-		this.id = id;
+		id++;
 		this.nombre = nombre;
 	}
 

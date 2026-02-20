@@ -7,6 +7,7 @@ import clases.Ataque;
 import clases.Entidad;
 import clases.Equipamiento;
 import clases.Heroe;
+import clases.Jarron;
 import clases.Monstruo;
 import clases.Tabla;
 import vista.BuscaMinasVistaConsola;
@@ -35,11 +36,14 @@ public class BuscaMinasControlador {
 		boolean perder = false;
 		ArrayList<Ataque> listaAtaques = new ArrayList<>();
 		ArrayList<Equipamiento> listaEquipamientos = new ArrayList<>();
+		ArrayList<Equipamiento> listaEquipamientoDisponible = new ArrayList<>();
+		añadirEquipamientoLista(listaEquipamientoDisponible);
 		Heroe usoHeroe = new Heroe(10,4,0,listaEquipamientos,listaAtaques);
 		/**
 		 * PREUBA
 		 */
 		Monstruo usoEnemigo = new Monstruo(10, 4);
+		Jarron usoJarron = new Jarron(10, 0);
 		int opcionMenu;
 
 		do {
@@ -48,7 +52,6 @@ public class BuscaMinasControlador {
 			switch (opcionMenu) {
 			case 0:
 				do {
-					
 					vistaConsola.mostrarTablaVisible(usoTabla);
 					vistaConsola.mostrarMensaje("");
 					
@@ -56,7 +59,6 @@ public class BuscaMinasControlador {
 					filaElegida = 0;
 					columnaElegida = 0;
 					usoHeroe.subirNivel();
-					
 					vistaConsola.mostrarTabla(usoTabla);
 					vistaConsola.mostrarMensaje("Elige una fila: ");
 					filaElegida = teclado.nextInt();
@@ -66,12 +68,14 @@ public class BuscaMinasControlador {
 					/**
 					 * 
 					 */
-					if (usoTabla.getMapaCeldas()[filaElegida][columnaElegida].isTieneMina() || usoHeroe.getCantidadVida()==0) {
+					if (usoTabla.getMapaCeldas()[filaElegida][columnaElegida].isTieneMina() || usoHeroe.getCantidadVidaRestante()==0) {
 						perder = true;
 						vistaConsola.mostrarMensaje("Has perdido");
 						vistaConsola.mostrarTablaVisible(usoTabla);
-					}else if(usoTabla.getMapaCeldas()[filaElegida][columnaElegida].isTieneJarron() || usoTabla.getMapaCeldas()[filaElegida][columnaElegida].isTieneMonstruo()) {
-						combateEnemigo(usoHeroe, usoEnemigo);
+					}else if(usoTabla.getMapaCeldas()[filaElegida][columnaElegida].isTieneJarron()) {
+						combateEnemigo(usoHeroe, usoJarron,listaEquipamientoDisponible);
+					}else if(usoTabla.getMapaCeldas()[filaElegida][columnaElegida].isTieneMonstruo()) {
+						combateEnemigo(usoHeroe, usoEnemigo, listaEquipamientoDisponible);
 					}
 
 				} while (!perder);
@@ -83,11 +87,16 @@ public class BuscaMinasControlador {
 		} while (condicion);
 		teclado.close();
 	}
-	
-	private void combateEnemigo(Heroe usoHeroe, Entidad usoMonstruoJarron) {
+	/**
+	 * comvateEnemigo(Heroe usoHeroe, Entidad usoMonstruoJarroon): el heroe realiza un combate con el monstruo donde Heroe le quita vida, y viceversa hasta que uno de los dos tenga 0 cantidadVidaRestante
+	 * @param usoHeroe
+	 * @param usoMonstruoJarron
+	 */
+	private void combateEnemigo(Heroe usoHeroe, Entidad usoMonstruoJarron, ArrayList<Equipamiento> listaEquipamientoDisponible) {
 		/**
 		 * 
 		 */
+		@SuppressWarnings("resource")
 		Scanner teclado = new Scanner(System.in);
 		BuscaMinasVistaConsola vistaConsola = new BuscaMinasVistaConsola();
 		int ataqueElegido;
@@ -95,24 +104,47 @@ public class BuscaMinasControlador {
 			ataqueElegido=0;
 			vistaConsola.mostrarMensaje("");
 			vistaConsola.mostrarMensaje("El turno del heroe ha comenzado.");
-			vistaConsola.mostrarMensaje("Vida: "+usoMonstruoJarron.getCantidadVida());
 			
 			vistaConsola.mostrarEstadisticasHeroe(usoHeroe);
 			System.out.println("");
 			vistaConsola.mostrarMensaje("Lista de ataques: ");
 			vistaConsola.mostrarMensaje(usoHeroe.toStringListaAtaques());
 			ataqueElegido = teclado.nextInt();
-			usoMonstruoJarron.setCantidadVida(usoMonstruoJarron.getCantidadVida()-usoHeroe.calcularDañoAtaque(usoHeroe, ataqueElegido));
+			usoMonstruoJarron.setCantidadVidaRestante(usoMonstruoJarron.getCantidadVidaRestante()-usoHeroe.calcularDañoAtaque(usoHeroe, ataqueElegido));
 			if(usoMonstruoJarron instanceof Monstruo) {
 				System.out.println("Es el turno del monstruo");
 				vistaConsola.mostrarMensaje("El monstruo va a atacar");
-				usoHeroe.setCantidadVida(usoHeroe.getCantidadVida()-usoMonstruoJarron.getCantidadAtaque());
+				usoHeroe.setCantidadVidaRestante(ataqueElegido);
 			}else {
 				System.out.println("El jarrón está tieso");
 			}
 			
-		}while(usoHeroe.getCantidadVida()>0 || usoMonstruoJarron.getCantidadVida()>0);
-		teclado.close();
+		}while(usoHeroe.getCantidadVidaRestante()>0 && usoMonstruoJarron.getCantidadVidaRestante()>0);
+		if(usoHeroe.getCantidadVidaRestante()==0) {
+			vistaConsola.mostrarMensaje("El Heroe ha sido derrotado");
+		}else {
+			if(usoMonstruoJarron instanceof Jarron) {
+				((Jarron) usoMonstruoJarron).generarAleatoriedadAcciones(usoHeroe, listaEquipamientoDisponible);
+				vistaConsola.mostrarMensaje("El jarrón dio su recompensa");
+			}else {
+				vistaConsola.mostrarMensaje("El monstruo ha sido derrotado");
+			}
+		}
+		
+	}
+	/**
+	 * añadirEquipamientoLista(ArrayList<Equipamiento>  listaEquipamientoDisponible): añade a listaEquipamientoDisponible el equipamiento previamente definido
+	 * @param listaEquipamientoDisponible
+	 * @return rrayList<Equipamiento>
+	 */
+	public static ArrayList<Equipamiento> añadirEquipamientoLista(ArrayList<Equipamiento>  listaEquipamientoDisponible) {
+		Equipamiento casco = new Equipamiento("Casco del guerrero Mintrod", 4);
+		Equipamiento armadura = new Equipamiento("Armadura refozada", 3);
+		Equipamiento guanteletes = new Equipamiento("Guantes de duraluminio Iaónico", 6);
+		listaEquipamientoDisponible.add(casco);
+		listaEquipamientoDisponible.add(armadura);
+		listaEquipamientoDisponible.add(guanteletes);
+		return listaEquipamientoDisponible;
 	}
 	
 

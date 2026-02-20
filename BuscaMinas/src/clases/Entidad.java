@@ -8,7 +8,7 @@ public abstract class Entidad{
 	 * cantidadVidaMaxima: cantidad límite de vida
 	 * cantidadVidaRestante: cantidad de vida que se modifica
 	 */
-	protected final int cantidadVidaMaxima;
+	protected int cantidadVidaMaxima;
 	protected int cantidadVidaRestante;
 	protected int cantidadAtaque;
 	/**
@@ -16,22 +16,33 @@ public abstract class Entidad{
 	 * @param cantidadAtaque
 	 */
 	public Entidad(int cantidadVidaMaxima, int cantidadAtaque) {
-		super();
 		this.cantidadVidaMaxima = cantidadVidaMaxima;
 		this.cantidadVidaRestante = cantidadVidaMaxima;
 		this.cantidadAtaque = cantidadAtaque;
 	}
 	/**
-	 * @return the cantidadVida
+	 * @return the cantidadVidaMaxima
 	 */
-	public int getCantidadVida() {
+	public int getCantidadVidaMaxima() {
+		return cantidadVidaMaxima;
+	}
+	/**
+	 * @param cantidadVidaMaxima the cantidadVidaMaxima to set
+	 */
+	public void setCantidadVidaMaxima(int cantidadVidaMaxima) {
+		this.cantidadVidaMaxima = cantidadVidaMaxima;
+	}
+	/**
+	 * @return the cantidadVidaRestante
+	 */
+	public int getCantidadVidaRestante() {
 		return cantidadVidaRestante;
 	}
 	/**
-	 * @param cantidadVida the cantidadVida to set
+	 * @param cantidadVidaRestante the cantidadVidaRestante to set
 	 */
-	public void setCantidadVida(int cantidadVida) {
-		this.cantidadVidaRestante = cantidadVida;
+	public void setCantidadVidaRestante(int cantidadVidaRestante) {
+		this.cantidadVidaRestante = cantidadVidaRestante;
 	}
 	/**
 	 * @return the cantidadAtaque
@@ -45,6 +56,7 @@ public abstract class Entidad{
 	public void setCantidadAtaque(int cantidadAtaque) {
 		this.cantidadAtaque = cantidadAtaque;
 	}
+	
 	
 	
 }

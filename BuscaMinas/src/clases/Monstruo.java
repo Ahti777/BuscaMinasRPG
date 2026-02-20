@@ -14,9 +14,11 @@ public class Monstruo extends Entidad{
 		super(cantidadVida, cantidadAtaque);
 	}
 	/**
-	 * 
+	 * darExperiencia(Heroe usoHeroe): suministra experiencia a Heroe
+	 * RECORDATORIO: ESTO NO ES LA FUNCIÓN DEFINITIVA
 	 */
-	public void darExperiencia() {
+	public void darExperiencia(Heroe usoHeroe) {
+		usoHeroe.setCantidadExperiencia(usoHeroe.getCantidadExperiencia()+4);
 
 	}
 	/**

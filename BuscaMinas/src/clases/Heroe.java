@@ -24,13 +24,15 @@ public class Heroe extends Entidad {
 	 * @param miEquipamiento
 	 * @param listaAtaques
 	 */
-	public Heroe(int cantidadVida, int cantidadAtaque, int cantidadExperiencia, ArrayList<Equipamiento> miEquipamiento,
+	public Heroe(int cantidadVidaMaxima, int cantidadAtaque, int cantidadExperiencia, ArrayList<Equipamiento> miEquipamiento,
 			ArrayList<Ataque> listaAtaques) {
-		super(cantidadVida, cantidadAtaque);
+		super(cantidadVidaMaxima, cantidadAtaque);
 		this.cantidadExperiencia = cantidadExperiencia;
 		this.miEquipamiento = miEquipamiento;
 		this.listaAtaques = listaAtaques;
 	}
+
+	
 
 	/**
 	 * @return the cantidadExperiencia
@@ -39,12 +41,16 @@ public class Heroe extends Entidad {
 		return cantidadExperiencia;
 	}
 
+
+
 	/**
 	 * @param cantidadExperiencia the cantidadExperiencia to set
 	 */
 	public void setCantidadExperiencia(int cantidadExperiencia) {
 		this.cantidadExperiencia = cantidadExperiencia;
 	}
+
+
 
 	/**
 	 * @return the miEquipamiento
@@ -53,12 +59,16 @@ public class Heroe extends Entidad {
 		return miEquipamiento;
 	}
 
+
+
 	/**
 	 * @param miEquipamiento the miEquipamiento to set
 	 */
 	public void setMiEquipamiento(ArrayList<Equipamiento> miEquipamiento) {
 		this.miEquipamiento = miEquipamiento;
 	}
+
+
 
 	/**
 	 * @return the listaAtaques
@@ -67,12 +77,16 @@ public class Heroe extends Entidad {
 		return listaAtaques;
 	}
 
+
+
 	/**
 	 * @param listaAtaques the listaAtaques to set
 	 */
 	public void setListaAtaques(ArrayList<Ataque> listaAtaques) {
 		this.listaAtaques = listaAtaques;
 	}
+
+
 
 	/**
 	 * 
@@ -89,7 +103,6 @@ public class Heroe extends Entidad {
 	public void subirNivel() {
 		/**
 		 * RECORDAR: ESTO SON DATOS DE PRUEBA. NO APARECERAN EN LA VERSIÓN DE VERDAD
-		 * RECORDAD: AL SUBIR DE NIVEL TMB DEBERÍA DE SUBIR LA VIDA
 		 */
 		ArrayList<Ataque> copiaListaAtaques = listaAtaques;
 		Ataque ceroNivel = new Ataque("Tajo", 0.0, 1);
@@ -98,12 +111,20 @@ public class Heroe extends Entidad {
 		Ataque terceroNivel = new Ataque("Golpe mediante una mona china frigorifico", 0.20, 1.2);
 		if (cantidadExperiencia == 3) {
 			copiaListaAtaques.add(primerNivel);
+			cantidadVidaMaxima+=3;
+			cantidadVidaRestante = cantidadVidaMaxima;
 		} else if (cantidadExperiencia == 6) {
 			copiaListaAtaques.add(segundoNivel);
+			cantidadVidaMaxima+=3;
+			cantidadVidaRestante = cantidadVidaMaxima;
 		} else if (cantidadExperiencia == 10) {
 			copiaListaAtaques.add(terceroNivel);
+			cantidadVidaMaxima+=3;
+			cantidadVidaRestante = cantidadVidaMaxima;
 		} else if(cantidadExperiencia==0) {
 			copiaListaAtaques.add(ceroNivel);
+			cantidadVidaMaxima+=3;
+			cantidadVidaRestante = cantidadVidaMaxima;
 		}
 		setListaAtaques(copiaListaAtaques);
 	}

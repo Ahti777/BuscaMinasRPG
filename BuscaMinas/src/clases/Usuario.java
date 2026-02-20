@@ -10,54 +10,25 @@ import java.util.List;
 public class Usuario {
 
 	private String nombre;
-	private List<Partida> misPartidas;
+	private String contrasenia;
+	
+	
 
 	/**
 	 * @param nombre
-	 * @param misPartidas
+	 * @param contrasenia
 	 */
-	public Usuario(String nombre) {
+	public Usuario(String nombre, String contrasenia) {
+		super();
 		this.nombre = nombre;
-		this.misPartidas = new ArrayList<>();
+		this.contrasenia = contrasenia;
 	}
-
-	/**
-	 * @return the nombre
-	 */
-	public String getNombre() {
-		return nombre;
-	}
-
-	/**
-	 * @param nombre the nombre to set
-	 */
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-	/**
-	 * @return the misPartidas
-	 */
-	public List<Partida> getMisPartidas() {
-		return misPartidas;
-	}
-
-	/**
-	 * @param misPartidas the misPartidas to set
-	 */
-	public void setMisPartidas(List<Partida> misPartidas) {
-		this.misPartidas = misPartidas;
-	}
-
-	public void crearPartida(Partida partida) {
-		if (partida != null) {
-			this.misPartidas.add(partida);
+	
+	public boolean verificarContraseñaIntroducida(String contraseniaIntroducida) {
+		if(contraseniaIntroducida.equals(contrasenia)) {
+			return true;
+		}else {
+			return true;
 		}
-	}
-
-//Para eliminar partidas
-	public boolean eliminarPartida(int idPartida) {
-		return this.misPartidas.removeIf(partida -> partida.getId() == idPartida);
-
 	}
 }

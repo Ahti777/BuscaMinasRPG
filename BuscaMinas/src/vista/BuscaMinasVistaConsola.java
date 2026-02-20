@@ -79,7 +79,7 @@ public class BuscaMinasVistaConsola implements BuscaMinasVista {
 	
 	public void mostrarEstadisticasHeroe(Heroe usoHeroe) {
 		System.out.println("Estadísticas Heroe: ");
-		System.out.println("Vida: "+usoHeroe.getCantidadVida()+" Experiencia: "+usoHeroe.getCantidadExperiencia());
+		System.out.println("Vida: "+usoHeroe.getCantidadVidaRestante()+" Experiencia: "+usoHeroe.getCantidadExperiencia());
 	}
 
 }
