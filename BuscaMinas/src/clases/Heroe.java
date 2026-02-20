@@ -9,7 +9,9 @@ import java.util.Iterator;
 
 public class Heroe extends Entidad {
 	/**
-	 * experiencia es un numero que permite subir de nivel
+	 * cantidadExperiencia: la cantidad de experiencia que posee Heroe
+	 * miEquipamiento: lista de objetos que posee Heroe
+	 * listaAtaques: lista de ataques que puede usar Heroe
 	 */
 	private int cantidadExperiencia;
 	private ArrayList<Equipamiento> miEquipamiento;
@@ -76,15 +78,18 @@ public class Heroe extends Entidad {
 	 * 
 	 * @param usoHeroe
 	 * @param num
-	 * @return
+	 * @return int
 	 */
 	public int calcularDañoAtaque(Heroe usoHeroe, int num) {
 		return (int) (usoHeroe.getCantidadAtaque() * usoHeroe.getListaAtaques().get(num).getEscaladoDaño()) + 1;
 	}
-
+	/**
+	 * subirNivel(): añade a ataques a la listaAtaques al llegar a cierto punto de experiencia
+	 */
 	public void subirNivel() {
 		/**
 		 * RECORDAR: ESTO SON DATOS DE PRUEBA. NO APARECERAN EN LA VERSIÓN DE VERDAD
+		 * RECORDAD: AL SUBIR DE NIVEL TMB DEBERÍA DE SUBIR LA VIDA
 		 */
 		ArrayList<Ataque> copiaListaAtaques = listaAtaques;
 		Ataque ceroNivel = new Ataque("Tajo", 0.0, 1);
@@ -102,11 +107,18 @@ public class Heroe extends Entidad {
 		}
 		setListaAtaques(copiaListaAtaques);
 	}
-	
+	/**
+	 * toStringHeroe(): muestra la cantidadVida, cantidadAtaque y cantidadExperiencia del Heroe
+	 * @return String
+	 */
 	public String toStringHeroe() {
-		return cantidadVida+" "+cantidadAtaque+" "+cantidadExperiencia;
+		return cantidadVidaRestante+" "+cantidadAtaque+" "+cantidadExperiencia;
 	}
 	
+	/**
+	 * toStringListaAtaques(): muestra los ataques que posee el heroe
+	 * @return String
+	 */
 	public String toStringListaAtaques() {
 		String salida = "";
 		int contador = 0;

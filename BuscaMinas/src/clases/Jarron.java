@@ -12,11 +12,15 @@ public class Jarron extends Entidad{
 		super(cantidadVida, cantidadAtaque);
 	}
 	/**
-	 * 
+	 * darVida(): permite aumentar la vida que posee el heroe
 	 */
 	public void darVida(Heroe usoHeroe) {
 		usoHeroe.setCantidadVida((int) (usoHeroe.getCantidadVida()*0.15));
 	}
+	/**
+	 * darExperiencia(): le da al heroe una cantidad de experiencia
+	 * @param usoHeroe
+	 */
 	public void darExperiencia(Heroe usoHeroe) {
 		usoHeroe.setCantidadVida(4);
 	}
@@ -24,6 +28,11 @@ public class Jarron extends Entidad{
 		
 		
 	}
+	/**
+	 * generarAleatoriedadAcciones(): elige de forma aleatoria si ejeutar el método darVida(), darEquipamiento(),darExperiencia() o nada
+	 * @param usoHeroe
+	 * @param listaEquipamientoDisponible
+	 */
 	public void generarAleatoriedadAcciones(Heroe usoHeroe, ArrayList<Equipamiento> listaEquipamientoDisponible) {
 		int numeroAleatorio = (int) ((Math.random()*125)+1);
 		if(numeroAleatorio>=0 && numeroAleatorio<25) {

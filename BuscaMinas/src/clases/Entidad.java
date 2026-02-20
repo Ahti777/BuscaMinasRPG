@@ -4,29 +4,34 @@ package clases;
  *@version 10/02/2026
  */
 public abstract class Entidad{
-	
-	protected int cantidadVida;
+	/**
+	 * cantidadVidaMaxima: cantidad límite de vida
+	 * cantidadVidaRestante: cantidad de vida que se modifica
+	 */
+	protected final int cantidadVidaMaxima;
+	protected int cantidadVidaRestante;
 	protected int cantidadAtaque;
 	/**
 	 * @param cantidadVida
 	 * @param cantidadAtaque
 	 */
-	public Entidad(int cantidadVida, int cantidadAtaque) {
+	public Entidad(int cantidadVidaMaxima, int cantidadAtaque) {
 		super();
-		this.cantidadVida = cantidadVida;
+		this.cantidadVidaMaxima = cantidadVidaMaxima;
+		this.cantidadVidaRestante = cantidadVidaMaxima;
 		this.cantidadAtaque = cantidadAtaque;
 	}
 	/**
 	 * @return the cantidadVida
 	 */
 	public int getCantidadVida() {
-		return cantidadVida;
+		return cantidadVidaRestante;
 	}
 	/**
 	 * @param cantidadVida the cantidadVida to set
 	 */
 	public void setCantidadVida(int cantidadVida) {
-		this.cantidadVida = cantidadVida;
+		this.cantidadVidaRestante = cantidadVida;
 	}
 	/**
 	 * @return the cantidadAtaque

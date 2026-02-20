@@ -53,7 +53,10 @@ public class Ataque {
 	public void setEscaladoDaño(double escaladoDaño) {
 		this.escaladoDaño = escaladoDaño;
 	}
-	
+	/**
+	 * toStringAtaque(): muestra el nombre, cantidad de acierto y el porcentaje de daño que aumenta
+	 * @return
+	 */
 	public String toStringAtaque() {
 		return nombre+" "+cantidadAcierto+" "+escaladoDaño;
 	}
