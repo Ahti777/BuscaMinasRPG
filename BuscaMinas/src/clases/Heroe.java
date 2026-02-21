@@ -30,6 +30,8 @@ public class Heroe extends Entidad {
 		this.cantidadExperiencia = cantidadExperiencia;
 		this.miEquipamiento = miEquipamiento;
 		this.listaAtaques = listaAtaques;
+		Ataque ceroNivel = new Ataque("Tajo", 0.0, 1);
+		listaAtaques.add(ceroNivel);
 	}
 
 	
@@ -105,7 +107,6 @@ public class Heroe extends Entidad {
 		 * RECORDAR: ESTO SON DATOS DE PRUEBA. NO APARECERAN EN LA VERSIÓN DE VERDAD
 		 */
 		ArrayList<Ataque> copiaListaAtaques = listaAtaques;
-		Ataque ceroNivel = new Ataque("Tajo", 0.0, 1);
 		Ataque primerNivel = new Ataque("Golpe ascendente con backflip", 0.20, 1.2);
 		Ataque segundoNivel = new Ataque("Golpe ascendente con baile", 0.20, 1.2);
 		Ataque terceroNivel = new Ataque("Golpe mediante una mona china frigorifico", 0.20, 1.2);
@@ -121,11 +122,7 @@ public class Heroe extends Entidad {
 			copiaListaAtaques.add(terceroNivel);
 			cantidadVidaMaxima+=3;
 			cantidadVidaRestante = cantidadVidaMaxima;
-		} else if(cantidadExperiencia==0) {
-			copiaListaAtaques.add(ceroNivel);
-			cantidadVidaMaxima+=3;
-			cantidadVidaRestante = cantidadVidaMaxima;
-		}
+		} 
 		setListaAtaques(copiaListaAtaques);
 	}
 	/**

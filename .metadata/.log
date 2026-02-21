@@ -10571,3 +10571,127 @@ java.lang.IllegalArgumentException: negative length=-30 startPosition= 438
 	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
 	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundWorker.run(AbstractReconciler.java:201)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
+!SESSION 2026-02-21 08:46:38.350 -----------------------------------------------
+eclipse.buildId=4.39.0.20260129-0236
+java.version=21.0.10
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/artemzimin/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.eclipse.epp.package.jee.product -keyring /Users/artemzimin/.eclipse_keyring
+
+!ENTRY ch.qos.logback.classic 1 0 2026-02-21 08:46:39.574
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2026-02-21 08:46:42.858
+!MESSAGE Logback config file: /Users/artemzimin/Documents/BuscaMinasRPG/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.101.20251017-1242.xml
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2026-02-21 08:46:43.032
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://org.eclipse.papyrus.infra.ui.fonts/org.eclipse.papyrus.infra.ui.fonts.internal.addon.FontAddon
+
+!ENTRY org.eclipse.oomph.jreinfo 4 0 2026-02-21 08:46:58.508
+!MESSAGE Final de archivo prematuro.
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Final de archivo prematuro.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:262)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:122)
+	at org.eclipse.oomph.util.XMLUtil.loadDocument(XMLUtil.java:50)
+	at org.eclipse.oomph.util.XMLUtil.loadRootElement(XMLUtil.java:65)
+	at org.eclipse.oomph.jreinfo.JREInfo.getAllMac(JREInfo.java:199)
+	at org.eclipse.oomph.jreinfo.JREInfo.getAll(JREInfo.java:73)
+	at org.eclipse.oomph.jreinfo.JREManager.loadJavaHomes(JREManager.java:398)
+	at org.eclipse.oomph.jreinfo.JREManager.<init>(JREManager.java:78)
+	at org.eclipse.oomph.jreinfo.JREManager.<clinit>(JREManager.java:62)
+	at org.eclipse.oomph.setup.ui.wizards.SetupWizard.updateJREs(SetupWizard.java:997)
+	at org.eclipse.oomph.setup.ui.wizards.SetupWizard.indexLoaded(SetupWizard.java:940)
+	at org.eclipse.oomph.setup.ui.wizards.SetupWizard$IndexLoader.indexLoaded(SetupWizard.java:1473)
+	at org.eclipse.oomph.setup.ui.wizards.SetupWizard$IndexLoader$4.run(SetupWizard.java:1251)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4393)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4016)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.block(ModalContext.java:164)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:360)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:472)
+	at org.eclipse.oomph.setup.ui.wizards.SetupWizard$ProgressMonitorDialogIndexLoader.loadIndex(SetupWizard.java:1580)
+	at org.eclipse.oomph.setup.ui.wizards.SetupWizard$IndexLoader.loadIndex(SetupWizard.java:1181)
+	at org.eclipse.oomph.setup.ui.wizards.SetupWizard$4.run(SetupWizard.java:930)
+	at org.eclipse.oomph.ui.UIUtil$4.run(UIUtil.java:567)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4393)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4016)
+	at org.eclipse.oomph.setup.ui.wizards.SetupWizard$IndexLoader.awaitIndexLoad(SetupWizard.java:1492)
+	at org.eclipse.oomph.setup.ui.wizards.VariablePage.enterPage(VariablePage.java:685)
+	at org.eclipse.oomph.setup.ui.wizards.SetupWizard.pageChanged(SetupWizard.java:664)
+	at org.eclipse.jface.wizard.WizardDialog$5.run(WizardDialog.java:1519)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:169)
+	at org.eclipse.jface.wizard.WizardDialog.firePageChanged(WizardDialog.java:1516)
+	at org.eclipse.jface.wizard.WizardDialog.update(WizardDialog.java:1326)
+	at org.eclipse.jface.wizard.WizardDialog.showStartingPage(WizardDialog.java:1282)
+	at org.eclipse.jface.wizard.WizardDialog.createContents(WizardDialog.java:639)
+	at org.eclipse.oomph.ui.OomphWizardDialog.createContents(OomphWizardDialog.java:133)
+	at org.eclipse.jface.window.Window.create(Window.java:426)
+	at org.eclipse.jface.dialogs.Dialog.create(Dialog.java:1090)
+	at org.eclipse.jface.window.Window.open(Window.java:783)
+	at org.eclipse.oomph.setup.ui.wizards.SetupWizard.openDialog(SetupWizard.java:782)
+	at org.eclipse.oomph.setup.ui.wizards.SetupWizard$Updater.openDialog(SetupWizard.java:1813)
+	at org.eclipse.oomph.setup.ui.wizards.SetupWizard$Updater.perform(SetupWizard.java:1850)
+	at org.eclipse.oomph.setup.presentation.NotificationViewPart$2.lambda$0(NotificationViewPart.java:285)
+	at org.eclipse.oomph.ui.UIUtil$5.run(UIUtil.java:604)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4393)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4016)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1051)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:684)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:583)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:185)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:219)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:615)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:563)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1415)
+!SESSION 2026-02-21 08:47:51.512 -----------------------------------------------
+eclipse.buildId=4.39.0.20260219-0754
+java.version=21.0.10
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/artemzimin/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.eclipse.epp.package.jee.product -keyring /Users/artemzimin/.eclipse_keyring
+
+!ENTRY ch.qos.logback.classic 1 0 2026-02-21 08:47:53.376
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2026-02-21 08:48:41.061
+!MESSAGE Logback config file: /Users/artemzimin/Documents/BuscaMinasRPG/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.101.20251017-1242.xml
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2026-02-21 08:48:41.229
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://org.eclipse.papyrus.infra.ui.fonts/org.eclipse.papyrus.infra.ui.fonts.internal.addon.FontAddon
+!SESSION 2026-02-21 10:37:32.325 -----------------------------------------------
+eclipse.buildId=4.39.0.20260219-0754
+java.version=21.0.10
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/artemzimin/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.eclipse.epp.package.jee.product -keyring /Users/artemzimin/.eclipse_keyring
+
+!ENTRY ch.qos.logback.classic 1 0 2026-02-21 10:37:33.757
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2026-02-21 10:37:37.889
+!MESSAGE Logback config file: /Users/artemzimin/Documents/BuscaMinasRPG/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.101.20251017-1242.xml
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2026-02-21 10:37:38.075
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://org.eclipse.papyrus.infra.ui.fonts/org.eclipse.papyrus.infra.ui.fonts.internal.addon.FontAddon

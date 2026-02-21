@@ -44,6 +44,7 @@ public class Jarron extends Entidad{
 	 */
 	public void generarAleatoriedadAcciones(Heroe usoHeroe, ArrayList<Equipamiento> listaEquipamientoDisponible) {
 		int numeroAleatorio = (int) ((Math.random()*125)+1);
+		
 		if(numeroAleatorio>=0 && numeroAleatorio<25) {
 			darVida(usoHeroe);
 			System.out.println("vida");
@@ -54,7 +55,8 @@ public class Jarron extends Entidad{
 			darExperiencia(usoHeroe);
 			System.out.println("experiencia");
 		}else if(numeroAleatorio>=75 && numeroAleatorio<125) {
-			System.out.println("La nada");
+			System.out.println("La nada"
+					+ "");
 		}
 	}
 	

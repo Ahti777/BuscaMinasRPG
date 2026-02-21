@@ -52,13 +52,11 @@ public class BuscaMinasControlador {
 			switch (opcionMenu) {
 			case 0:
 				do {
-					vistaConsola.mostrarTablaVisible(usoTabla);
 					vistaConsola.mostrarMensaje("");
 					
 					
 					filaElegida = 0;
 					columnaElegida = 0;
-					usoHeroe.subirNivel();
 					vistaConsola.mostrarTabla(usoTabla);
 					vistaConsola.mostrarMensaje("Elige una fila: ");
 					filaElegida = teclado.nextInt();
@@ -84,7 +82,7 @@ public class BuscaMinasControlador {
 				condicion = false;
 				break;
 			}
-		} while (condicion);
+		} while (condicion || !perder);
 		teclado.close();
 	}
 	/**
@@ -123,6 +121,7 @@ public class BuscaMinasControlador {
 		if(usoHeroe.getCantidadVidaRestante()==0) {
 			vistaConsola.mostrarMensaje("El Heroe ha sido derrotado");
 		}else {
+			usoHeroe.subirNivel();
 			if(usoMonstruoJarron instanceof Jarron) {
 				((Jarron) usoMonstruoJarron).generarAleatoriedadAcciones(usoHeroe, listaEquipamientoDisponible);
 				vistaConsola.mostrarMensaje("El jarrón dio su recompensa");

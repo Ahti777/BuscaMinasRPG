@@ -57,11 +57,14 @@ public class BuscaMinasVistaConsola implements BuscaMinasVista {
 		}
 
 	}
-
+	/**
+	 * mostrarTablaVisible
+	 * @param usoTabla
+	 */
 	public void mostrarTablaVisible(Tabla usoTabla) {
 		for (int i = 0; usoTabla.getMapaCeldas().length > i; i++) {
 			for (int t = 0; usoTabla.getMapaCeldas()[i].length > t; t++) {
-				usoTabla.getMapaCeldas()[i][t].setVisible(true);
+				//usoTabla.getMapaCeldas()[i][t].setVisible(true);
 				if (usoTabla.getMapaCeldas()[i][t].isVisible()) {
 					if (usoTabla.getMapaCeldas()[i][t].isTieneMina()) {
 						System.out.print("X ");
