@@ -12,7 +12,7 @@ public class Partida {
 	 * @param nombre
 	 * RECORDATORIO: GENERAR ID ÚNICO PARA CADA PARTIDA
 	 */
-	public Partida(int id, String nombre) {
+	public Partida(String nombre) {
 		super();
 		id++;
 		this.nombre = nombre;
@@ -34,10 +34,6 @@ public class Partida {
 
 	public int getId() {
 		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	@Override

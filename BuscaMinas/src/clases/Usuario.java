@@ -24,6 +24,39 @@ public class Usuario {
 		this.contrasenia = contrasenia;
 	}
 	
+	
+	/**
+	 * @return the nombre
+	 */
+	public String getNombre() {
+		return nombre;
+	}
+
+
+	/**
+	 * @param nombre the nombre to set
+	 */
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+
+	/**
+	 * @return the contrasenia
+	 */
+	public String getContrasenia() {
+		return contrasenia;
+	}
+
+
+	/**
+	 * @param contrasenia the contrasenia to set
+	 */
+	public void setContrasenia(String contrasenia) {
+		this.contrasenia = contrasenia;
+	}
+
+
 	public boolean verificarContraseñaIntroducida(String contraseniaIntroducida) {
 		if(contraseniaIntroducida.equals(contrasenia)) {
 			return true;

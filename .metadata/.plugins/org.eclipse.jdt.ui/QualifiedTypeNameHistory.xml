@@ -10,10 +10,14 @@
     <fullyQualifiedTypeName name="clases.Heroe"/>
     <fullyQualifiedTypeName name="clases.Monstruo"/>
     <fullyQualifiedTypeName name="clases.Ataque"/>
-    <fullyQualifiedTypeName name="java.util.Iterator"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="clases.Equipamiento"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="clases.Jarron"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="clases.gestionPartidas"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="java.util.Map.Entry"/>
+    <fullyQualifiedTypeName name="clases.GestionPartidas"/>
+    <fullyQualifiedTypeName name="clases.Usuario"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>
