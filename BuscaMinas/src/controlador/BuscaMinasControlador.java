@@ -3,6 +3,8 @@ package controlador;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import Excepciones.ContraseniaIncorrecta;
+import Excepciones.UsuarioNoExiste;
 import clases.Ataque;
 import clases.Entidad;
 import clases.Equipamiento;
@@ -29,20 +31,24 @@ public class BuscaMinasControlador {
 	}
 
 	public void iniciarJuego() {
+		// primer bucle while
 		Scanner teclado = new Scanner(System.in);
 		BuscaMinasVistaConsola vistaConsola = new BuscaMinasVistaConsola();
 		GestionPartidas usoGestionPartidas = new GestionPartidas();
 		String nombre;
-		String constraseña;
+		String contrasenia;
 		String nombrePartida;
-		int opcionElegidaInicioSesion;
+		int opcionElegidaGestionUsuarios;
+		boolean salirInicioSesion = true;
+		// secundo bucle while
+		int opcionElegidaSesionIniciada;
+		// tercer bucle while
 		int filas;
 		int columnas;
 		int filaElegida;
 		int columnaElegida;
 		Tabla usoTabla;
 		boolean condicion = true;
-		boolean salirInicioSesion = true;
 		boolean perder = false;
 		ArrayList<Ataque> listaAtaques = new ArrayList<>();
 		ArrayList<Equipamiento> listaEquipamientos = new ArrayList<>();
@@ -55,99 +61,123 @@ public class BuscaMinasControlador {
 		Monstruo usoEnemigo = new Monstruo(10, 4);
 		Jarron usoJarron = new Jarron(10, 0);
 		int opcionMenu;
-
+		/**
+		 * RECORDATORIO: VALIDAR LOS DATOS DE INICIO DE SESIÓN, NO FUNCIONA
+		 */
+		// primer bucle while
 		do {
-			vistaConsola.mostrarMensaje("Menú inicio sesion: "
-					+ "\n1. Crear usuario"
-					+ "\n2. Eliminar usuario"
-					+ "\n3. Iniciar sesión"
-					+ "\n4. Crear partida e iniciar juego"
-					+ "\n5. Eliminar partidas"
-					+ "\n6. Salir del menú de inicio de sesion");
-			opcionElegidaInicioSesion = teclado.nextInt();
+			//REINICAR LOS VALORES
+			nombre="";
+			
+			vistaConsola.mostrarMensaje("Menú inicio sesion: " + "\n1. Crear usuario" + "\n2. Eliminar usuario"
+					+ "\n3. Iniciar sesión" + "\n4. Salir del menú de inicio de sesion");
+			opcionElegidaGestionUsuarios = teclado.nextInt();
 			teclado.nextLine();
-			switch(opcionElegidaInicioSesion) {
+			// HACER UN MÉTODO
+			switch (opcionElegidaGestionUsuarios) {
 			case 1:
-				vistaConsola.mostrarMensaje("Cómo se llama el usuario? ");
-				nombre = teclado.nextLine();
-				vistaConsola.mostrarMensaje("Cuál es la contraseña del usuario? ");
-				constraseña = teclado.nextLine();
-				usoGestionPartidas.crearUsuario(nombre, constraseña);
+				nombre = pedirNombre();
+				contrasenia = pedirContrasenia();
+				usoGestionPartidas.crearUsuario(nombre, contrasenia);
 				break;
 			case 2:
-				vistaConsola.mostrarMensaje("Cómo se llama el usuario? ");
-				nombre = teclado.nextLine();
-				vistaConsola.mostrarMensaje("Cuál es la contraseña del usuario? ");
-				constraseña = teclado.nextLine();
-				usoGestionPartidas.eliminarUsuario(nombre, constraseña);
+				nombre = pedirNombre();
+				contrasenia = pedirContrasenia();
+				try {
+					usoGestionPartidas.validarUsusarioNoExistente(nombre);
+					usoGestionPartidas.validarContraseñaIntroducida(contrasenia);
+					usoGestionPartidas.eliminarUsuario(nombre, contrasenia);
+				} catch (UsuarioNoExiste e) {
+					vistaConsola.mostrarMensaje("El usuario no existe");
+				} catch (ContraseniaIncorrecta e) {
+					vistaConsola.mostrarMensaje("Contraseña incorrecta");
+				}
+
 				break;
 			case 3:
-				vistaConsola.mostrarMensaje("Cómo se llama el usuario? ");
-				nombre = teclado.nextLine();
-				vistaConsola.mostrarMensaje("Cuál es la contraseña del usuario? ");
-				constraseña = teclado.nextLine();
-				System.out.println(usoGestionPartidas.iniciarSesion(nombre, constraseña));
-				break;
-			case 4:
-				vistaConsola.mostrarMensaje("Cómo se llama el usuario? ");
-				nombre = teclado.nextLine();
-				vistaConsola.mostrarMensaje("Cuál es la contraseña del usuario? ");
-				constraseña = teclado.nextLine();
-				vistaConsola.mostrarMensaje("Como se va a llamar la partida? ");
-				nombrePartida = teclado.nextLine();
-				usoGestionPartidas.crearPartida(nombre, constraseña, nombrePartida);
-				filas = vistaConsola.pedirFila();
-				columnas = vistaConsola.pedirColumna();
-				usoTabla  = new Tabla(filas, columnas);
-				
-				do {
-					condicion = true;
-					perder=false;
-					vistaConsola.mostrarMensaje("Quieres empezar a jugar? " + "\n0. Empezar partida" + "\n1. Salir");
-					opcionMenu = teclado.nextInt();
-					switch (opcionMenu) {
-					case 0:
+				nombre = pedirNombre();
+				contrasenia = pedirContrasenia();
+
+				try {
+					
+					usoGestionPartidas.validarUsusarioNoExistente(nombre);
+					usoGestionPartidas.validarContraseñaIntroducida(contrasenia);
+					usoGestionPartidas.iniciarSesion(nombre, contrasenia);
+
+					vistaConsola.mostrarMensaje(
+							"Qué quieres hacer:" + "\n1. Crear partida e iniciar partida" + "\n2. Eliminar partida");
+					opcionElegidaSesionIniciada = teclado.nextInt();
+					switch (opcionElegidaSesionIniciada) {
+					case 1: {
+						nombrePartida = pedirNombrePartida();
+						usoGestionPartidas.crearPartida(nombre, contrasenia, nombrePartida);
+
+						filas = vistaConsola.pedirFila();
+						columnas = vistaConsola.pedirColumna();
+						usoTabla = new Tabla(filas, columnas);
+
 						do {
-							vistaConsola.mostrarMensaje("");
+							condicion = true;
+							perder = false;
+							vistaConsola.mostrarMensaje(
+									"Quieres empezar a jugar? " + "\n1. Empezar partida" + "\n2. Salir");
+							opcionMenu = teclado.nextInt();
+							switch (opcionMenu) {
+							case 1:
+								do {
+									vistaConsola.mostrarMensaje("");
 
-							filaElegida = 0;
-							columnaElegida = 0;
-							vistaConsola.mostrarTabla(usoTabla);
-							vistaConsola.mostrarMensaje("Elige una fila: ");
-							filaElegida = teclado.nextInt();
-							vistaConsola.mostrarMensaje("Elige una columna: ");
-							columnaElegida = teclado.nextInt();
-							usoTabla.getMapaCeldas()[filaElegida][columnaElegida].setVisible(true);
-							/**
-							 * 
-							 */
-							if (usoTabla.getMapaCeldas()[filaElegida][columnaElegida].isTieneMina()
-									|| usoHeroe.getCantidadVidaRestante() == 0) {
-								perder = true;
-								vistaConsola.mostrarMensaje("Has perdido");
-								vistaConsola.mostrarTablaVisible(usoTabla);
-							} else if (usoTabla.getMapaCeldas()[filaElegida][columnaElegida].isTieneJarron()) {
-								combateEnemigo(usoHeroe, usoJarron, listaEquipamientoDisponible);
-							} else if (usoTabla.getMapaCeldas()[filaElegida][columnaElegida].isTieneMonstruo()) {
-								combateEnemigo(usoHeroe, usoEnemigo, listaEquipamientoDisponible);
+									filaElegida = 0;
+									columnaElegida = 0;
+									vistaConsola.mostrarTabla(usoTabla);
+									vistaConsola.mostrarMensaje("Elige una fila: ");
+									filaElegida = teclado.nextInt();
+									vistaConsola.mostrarMensaje("Elige una columna: ");
+									columnaElegida = teclado.nextInt();
+									usoTabla.getMapaCeldas()[filaElegida][columnaElegida].setVisible(true);
+									/**
+									 * 
+									 */
+									if (usoTabla.getMapaCeldas()[filaElegida][columnaElegida].isTieneMina()
+											|| usoHeroe.getCantidadVidaRestante() == 0) {
+										perder = true;
+										vistaConsola.mostrarMensaje("Has perdido");
+										vistaConsola.mostrarTablaVisible(usoTabla);
+									} else if (usoTabla.getMapaCeldas()[filaElegida][columnaElegida].isTieneJarron()) {
+										combateEnemigo(usoHeroe, usoJarron, listaEquipamientoDisponible);
+									} else if (usoTabla.getMapaCeldas()[filaElegida][columnaElegida]
+											.isTieneMonstruo()) {
+										combateEnemigo(usoHeroe, usoEnemigo, listaEquipamientoDisponible);
+									}
+
+								} while (!perder);
+								condicion = false;
+								break;
+							case 2:
+								condicion = false;
+								break;
 							}
-
-						} while (!perder);
-						condicion = false;
-						break;
-					case 1:
-						condicion = false;
+						} while (condicion || !perder);
 						break;
 					}
-				} while (condicion || !perder);
+					case 2: {
+						nombrePartida = pedirNombrePartida();
+						usoGestionPartidas.eliminarPartida(nombre, contrasenia, nombrePartida);
+						break;
+					}
+					default:
+						throw new IllegalArgumentException("Unexpected value: " + opcionElegidaSesionIniciada);
+					}
+
+				} catch (UsuarioNoExiste e) {
+					vistaConsola.mostrarMensaje("");
+				} catch (ContraseniaIncorrecta e) {
+					vistaConsola.mostrarMensaje("");
+				}
+
 				break;
-			case 5:
-				System.out.println("Cómo se llama la partida? ");
-				nombrePartida = teclado.nextLine();
-				usoGestionPartidas.eliminarPartida(nombrePartida);
-				break;
-			case 6:
-				salirInicioSesion=false;
+			case 4:
+				salirInicioSesion = false;
 				break;
 			default:
 				System.out.println("No existe esa opcion");
@@ -179,7 +209,7 @@ public class BuscaMinasControlador {
 			vistaConsola.mostrarMensaje("El turno del heroe ha comenzado.");
 
 			vistaConsola.mostrarEstadisticasHeroe(usoHeroe);
-			vistaConsola.mostrarMensaje(""+usoHeroe.getCantidadExperiencia());
+			vistaConsola.mostrarMensaje("" + usoHeroe.getCantidadExperiencia());
 			System.out.println("");
 			vistaConsola.mostrarMensaje("Lista de ataques: ");
 			vistaConsola.mostrarMensaje(usoHeroe.toStringListaAtaques());
@@ -225,6 +255,36 @@ public class BuscaMinasControlador {
 		listaEquipamientoDisponible.add(armadura);
 		listaEquipamientoDisponible.add(guanteletes);
 		return listaEquipamientoDisponible;
+	}
+
+	private String pedirNombre() {
+		BuscaMinasVistaConsola vistaConsola = new BuscaMinasVistaConsola();
+		Scanner teclado = new Scanner(System.in);
+		String nombre;
+		vistaConsola.mostrarMensaje("Cómo se llama el usuario? ");
+		nombre = teclado.nextLine();
+		return nombre;
+
+	}
+
+	private String pedirContrasenia() {
+		BuscaMinasVistaConsola vistaConsola = new BuscaMinasVistaConsola();
+		Scanner teclado = new Scanner(System.in);
+		String constrasenia;
+		vistaConsola.mostrarMensaje("¿Contraseña? ");
+		constrasenia = teclado.nextLine();
+		return constrasenia;
+
+	}
+
+	private String pedirNombrePartida() {
+		BuscaMinasVistaConsola vistaConsola = new BuscaMinasVistaConsola();
+		Scanner teclado = new Scanner(System.in);
+		String nombrePartida;
+		vistaConsola.mostrarMensaje("¿Cómo es la constraseña? ");
+		nombrePartida = teclado.nextLine();
+		return nombrePartida;
+
 	}
 
 }
