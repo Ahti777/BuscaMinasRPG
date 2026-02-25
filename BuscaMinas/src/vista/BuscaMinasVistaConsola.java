@@ -31,7 +31,7 @@ public class BuscaMinasVistaConsola implements BuscaMinasVista {
 	@Override
 	public int pedirColumna() {
 		Scanner teclado = new Scanner(System.in);
-		System.out.println("Qué cantidad de Kolumnas va a tener la tabla?");
+		System.out.println("Qué cantidad de columnas va a tener la tabla?");
 		return teclado.nextInt();
 	}
 
@@ -41,13 +41,17 @@ public class BuscaMinasVistaConsola implements BuscaMinasVista {
 			for (int t = 0; usoTabla.getMapaCeldas()[i].length > t; t++) {
 				if (usoTabla.getMapaCeldas()[i][t].isVisible()) {
 					if (usoTabla.getMapaCeldas()[i][t].isTieneMina()) {
-						System.out.print("X ");
+						System.out.print(" X ");
 					}else if(usoTabla.getMapaCeldas()[i][t].isTieneJarron()) {
-						System.out.print("U ");
+						System.out.print(" U ");
 					}else if(usoTabla.getMapaCeldas()[i][t].isTieneMonstruo()) {
-						System.out.print("M ");
+						System.out.print(" M ");
 					}else {
-						System.out.print(usoTabla.getMapaCeldas()[i][t].getNumero() + " ");
+						if(usoTabla.getMapaCeldas()[i][t].getNumero()>9) {
+							System.out.print(usoTabla.getMapaCeldas()[i][t].getNumero() + " ");
+						}else {
+							System.out.print("0"+usoTabla.getMapaCeldas()[i][t].getNumero()+" ");
+						}
 					}
 				} else {
 					System.out.print(" - ");
@@ -64,12 +68,20 @@ public class BuscaMinasVistaConsola implements BuscaMinasVista {
 	public void mostrarTablaVisible(Tabla usoTabla) {
 		for (int i = 0; usoTabla.getMapaCeldas().length > i; i++) {
 			for (int t = 0; usoTabla.getMapaCeldas()[i].length > t; t++) {
-				//usoTabla.getMapaCeldas()[i][t].setVisible(true);
+				usoTabla.getMapaCeldas()[i][t].setVisible(true);
 				if (usoTabla.getMapaCeldas()[i][t].isVisible()) {
 					if (usoTabla.getMapaCeldas()[i][t].isTieneMina()) {
-						System.out.print("X ");
-					} else {
-						System.out.print(usoTabla.getMapaCeldas()[i][t].getNumero() + " ");
+						System.out.print(" X ");
+					}else if(usoTabla.getMapaCeldas()[i][t].isTieneJarron()) {
+						System.out.print(" U ");
+					}else if(usoTabla.getMapaCeldas()[i][t].isTieneMonstruo()) {
+						System.out.print(" M ");
+					}else {
+						if(usoTabla.getMapaCeldas()[i][t].getNumero()>9) {
+							System.out.print(usoTabla.getMapaCeldas()[i][t].getNumero() + " ");
+						}else {
+							System.out.print("0"+usoTabla.getMapaCeldas()[i][t].getNumero()+" ");
+						}
 					}
 				} else {
 					System.out.print(" - ");
@@ -79,6 +91,7 @@ public class BuscaMinasVistaConsola implements BuscaMinasVista {
 		}
 
 	}
+
 	
 	public void mostrarEstadisticasHeroe(Heroe usoHeroe) {
 		System.out.println("Estadísticas Heroe: ");

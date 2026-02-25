@@ -113,15 +113,15 @@ public class Heroe extends Entidad {
 		if (cantidadExperiencia == 3) {
 			copiaListaAtaques.add(primerNivel);
 			cantidadVidaMaxima+=3;
-			cantidadVidaRestante = cantidadVidaMaxima;
+			cantidadVidaRestante += cantidadVidaMaxima;
 		} else if (cantidadExperiencia == 6) {
 			copiaListaAtaques.add(segundoNivel);
 			cantidadVidaMaxima+=3;
-			cantidadVidaRestante = cantidadVidaMaxima;
+			cantidadVidaRestante += cantidadVidaMaxima;
 		} else if (cantidadExperiencia == 10) {
 			copiaListaAtaques.add(terceroNivel);
 			cantidadVidaMaxima+=3;
-			cantidadVidaRestante = cantidadVidaMaxima;
+			cantidadVidaRestante += cantidadVidaMaxima;
 		} 
 		setListaAtaques(copiaListaAtaques);
 	}

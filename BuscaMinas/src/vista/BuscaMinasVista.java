@@ -5,6 +5,8 @@ import clases.Tabla;
 /**
  * @author Artem Zimin Litvak
  * @version 17/02/2026
+ * 
+ * BuscaMinasVista: 
  */
 public interface BuscaMinasVista {
 	/**

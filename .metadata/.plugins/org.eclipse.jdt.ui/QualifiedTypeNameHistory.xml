@@ -24,4 +24,6 @@
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="Excepciones.UsuarioNoExiste"/>
     <fullyQualifiedTypeName name="Excepciones.ContraseniaIncorrecta"/>
+    <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
 </qualifiedTypeNameHistroy>

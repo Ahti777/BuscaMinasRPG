@@ -19,7 +19,6 @@ public class GestionPartidas {
 	 */
 	public GestionPartidas() {
 		super();
-		this.partidasGuardadas = partidasGuardadas;
 	}
 
 	/**

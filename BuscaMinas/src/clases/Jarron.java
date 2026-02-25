@@ -15,7 +15,11 @@ public class Jarron extends Entidad{
 	 * darVida(): permite aumentar la vida que posee el heroe
 	 */
 	public void darVida(Heroe usoHeroe) {
-		usoHeroe.setCantidadVidaRestante((int) (usoHeroe.getCantidadVidaRestante()*0.15));
+		if(usoHeroe.getCantidadVidaRestante()+(usoHeroe.getCantidadVidaRestante()*0.15)>usoHeroe.getCantidadVidaMaxima()) {
+			usoHeroe.setCantidadVidaRestante(usoHeroe.getCantidadVidaMaxima());
+		}else {
+			usoHeroe.setCantidadVidaRestante((int) (1+usoHeroe.getCantidadVidaRestante()+(usoHeroe.getCantidadVidaRestante()*0.15)));
+		}
 	}
 	/**
 	 * darExperiencia(): le da al heroe una cantidad de experiencia
