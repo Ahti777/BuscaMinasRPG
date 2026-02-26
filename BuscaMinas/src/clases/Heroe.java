@@ -107,9 +107,9 @@ public class Heroe extends Entidad {
 		 * RECORDAR: ESTO SON DATOS DE PRUEBA. NO APARECERAN EN LA VERSIÓN DE VERDAD
 		 */
 		ArrayList<Ataque> copiaListaAtaques = listaAtaques;
-		Ataque primerNivel = new Ataque("Golpe ascendente con backflip", 0.20, 1.2);
-		Ataque segundoNivel = new Ataque("Golpe ascendente con baile", 0.20, 1.2);
-		Ataque terceroNivel = new Ataque("Golpe mediante una mona china frigorifico", 0.20, 1.2);
+		Ataque primerNivel = new Ataque("Golpe ascendente con backflip", 0.80, 1.2);
+		Ataque segundoNivel = new Ataque("Golpe ascendente con baile", 0.60, 1.4);
+		Ataque terceroNivel = new Ataque("Golpe mediante una mona china frigorifico", 0.30, 1.7);
 		if (cantidadExperiencia == 3) {
 			copiaListaAtaques.add(primerNivel);
 			cantidadVidaMaxima+=3;
@@ -144,6 +144,7 @@ public class Heroe extends Entidad {
 		while(it.hasNext()) {
 			Ataque entrada = it.next();
 			salida+=contador+". "+entrada.getNombre()+" Cantidad fallo: "+entrada.getCantidadAcierto()+" Aumento de daño: "+entrada.getEscaladoDaño()+"\n";
+			contador++;
 		}
 		return salida;
 	}

@@ -57,12 +57,12 @@ public class BuscaMinasControlador {
 		ArrayList<Equipamiento> listaEquipamientos = new ArrayList<>();
 		ArrayList<Equipamiento> listaEquipamientoDisponible = new ArrayList<>();
 		añadirEquipamientoLista(listaEquipamientoDisponible);
-		Heroe usoHeroe = new Heroe(10, 4, 0, listaEquipamientos, listaAtaques);
+		Heroe usoHeroe = new Heroe(10, 4, 3, listaEquipamientos, listaAtaques);
 		/**
 		 * PREUBA
 		 */
-		Monstruo usoEnemigo = new Monstruo(10, 4);
-		Jarron usoJarron = new Jarron(10, 0);
+		Monstruo usoEnemigo = new Monstruo(0, 0);
+		Jarron usoJarron = new Jarron(0, 0);
 		int opcionMenu;
 		// primer bucle while
 		do {
@@ -147,9 +147,12 @@ public class BuscaMinasControlador {
 											vistaConsola.mostrarTablaVisible(usoTabla);
 											vistaConsola.mostrarMensaje("****************************");
 										} else if (usoTabla.getMapaCeldas()[filaElegida][columnaElegida].isTieneJarron()) {
+											usoJarron.setCantidadVidaMaxima((int) (usoHeroe.getCantidadVidaMaxima()*0.80));
 											combateEnemigo(usoHeroe, usoJarron, listaEquipamientoDisponible);
 										} else if (usoTabla.getMapaCeldas()[filaElegida][columnaElegida]
 												.isTieneMonstruo()) {
+											usoEnemigo.setCantidadVidaMaxima((int) (usoHeroe.getCantidadVidaMaxima()*0.80));
+											usoEnemigo.setCantidadAtaque((int) (usoHeroe.getCantidadAtaque()*0.30));
 											combateEnemigo(usoHeroe, usoEnemigo, listaEquipamientoDisponible);
 										}
 									}catch (ArrayIndexOutOfBoundsException e) {

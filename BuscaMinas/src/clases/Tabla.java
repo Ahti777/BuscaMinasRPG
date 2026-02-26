@@ -156,7 +156,7 @@ public class Tabla {
 		Celda[][] copiaMapaCeldas = getMapaCeldas();
 		for (int i = fila - 1; i < fila + 2; i++) {
 			for (int t = columna - 1; t < columna + 2; t++) {
-				if (i >= 0 && i < 8 && t >= 0 && t < 8) {
+				if (i >= 0 && i < filas && t >= 0 && t < columnas) {
 					if (getMapaCeldas()[i][t].isTieneMina()) {
 						copiaMapaCeldas[fila][columna].setNumero(copiaMapaCeldas[fila][columna].getNumero() + 10);
 					}else if(getMapaCeldas()[i][t].isTieneMonstruo()) {
