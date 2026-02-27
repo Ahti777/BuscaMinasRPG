@@ -3,8 +3,8 @@ package clases;
 import java.util.ArrayList;
 
 /**
- * @Autor Danilo José Mendez Mendez
- *@version 10/02/2026
+ * @Autor Danilo José Mendez Mendez / Artem Zimin Litvak
+ * @version 10/02/2026
  */
 public class Jarron extends Entidad{
 	
@@ -28,6 +28,11 @@ public class Jarron extends Entidad{
 	public void darExperiencia(Heroe usoHeroe) {
 		usoHeroe.setCantidadVidaRestante(4);
 	}
+	/**
+	 * 
+	 * @param usoHeroe
+	 * @param listaEquipamientoDisponible
+	 */
 	public void darEquipamiento(Heroe usoHeroe, ArrayList<Equipamiento> listaEquipamientoDisponible) {
 		int indiceAleatorioEquipamiento;
 		ArrayList<Equipamiento> nuevaListaObjetos = usoHeroe.getMiEquipamiento();
@@ -59,8 +64,7 @@ public class Jarron extends Entidad{
 			darExperiencia(usoHeroe);
 			System.out.println("experiencia");
 		}else if(numeroAleatorio>=75 && numeroAleatorio<125) {
-			System.out.println("La nada"
-					+ "");
+			System.out.println("La nada");
 		}
 	}
 	

@@ -1,11 +1,12 @@
 package clases;
 
 /**
- * @Autor Danilo José Mendez Mendez
+ * @Autor Danilo José Mendez Mendez / Artem Zimin Litvak
  * @version 10/02/2026
  */
 public class Partida {
-	static private int id=0;
+	static private int contadorPartidas;
+	private int id;
 	private String nombre;
 
 	/**
@@ -14,7 +15,8 @@ public class Partida {
 	 */
 	public Partida(String nombre) {
 		super();
-		id++;
+		id=contadorPartidas;
+		contadorPartidas++;
 		this.nombre = nombre;
 	}
 
@@ -31,7 +33,10 @@ public class Partida {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-
+	/**
+	 * 
+	 * @return 
+	 */
 	public int getId() {
 		return id;
 	}

@@ -3,7 +3,7 @@ package vista;
 import clases.Tabla;
 
 /**
- * @author Artem Zimin Litvak
+ * @author Danilo José Mendez Mendez / Artem Zimin Litvak
  * @version 17/02/2026
  * 
  * BuscaMinasVista: 

@@ -1,9 +1,14 @@
 package clases;
 /**
- * @Autor Artem Zimin Litvak
- *@version 17/02/2026
+ * @Autor Danilo José Mendez Mendez / Artem Zimin Litvak
+ * @version 17/02/2026
  */
 public class Ataque {
+	/**
+	 * nombre: es el nombre del ataque
+	 * cantidadAcierto: es la probabilidad de que falle el ataque
+	 * escaladoDaño: el porcentaje que aumenta la vida del heroe
+	 */
 	private String nombre;
 	private double cantidadAcierto;
 	private double escaladoDaño;

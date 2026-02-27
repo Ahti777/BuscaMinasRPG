@@ -1,6 +1,6 @@
 package clases;
 /**
- * @author artem
+ * @author Danilo José Mendez Mendez / Artem Zimin Litvak
  * @version 2.0 14/02/2026
  */
 public class Celda {

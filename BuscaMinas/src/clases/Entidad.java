@@ -1,6 +1,6 @@
 package clases;
 /**
- * @Autor Danilo José Mendez Mendez
+ * @Autor Danilo José Mendez Mendez / Artem Zimin Litvak
  *@version 10/02/2026
  */
 public abstract class Entidad{

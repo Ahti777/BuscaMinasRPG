@@ -1,11 +1,12 @@
 package clases;
 
 /**
- * @Autor Artem Zimin Litvak
+ * @Autor Danilo José Mendez Mendez / Artem Zimin Litvak
  *@version 17/02/2026
  */
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Random;
 
 public class Heroe extends Entidad {
 	/**
@@ -99,6 +100,16 @@ public class Heroe extends Entidad {
 	public int calcularDañoAtaque(Heroe usoHeroe, int num) {
 		return (int) (usoHeroe.getCantidadAtaque() * usoHeroe.getListaAtaques().get(num).getEscaladoDaño()) + 1;
 	}
+	/*public boolean probabilidadAcierto(Heroe usoHeroe, int num) {
+		Random numeroAleaotorio;
+		int porcentajeAcierto=numeroAleaotorio.nextInt(100-0+1)+0;
+		/*
+		if(usoHeroe.getListaAtaques().get(num).getCantidadAcierto()<) {
+			
+		}
+		*/
+	
+
 	/**
 	 * subirNivel(): añade a ataques a la listaAtaques al llegar a cierto punto de experiencia
 	 */
@@ -113,7 +124,7 @@ public class Heroe extends Entidad {
 		if (cantidadExperiencia == 3) {
 			copiaListaAtaques.add(primerNivel);
 			cantidadVidaMaxima+=3;
-			cantidadVidaRestante += cantidadVidaMaxima;
+			cantidadVidaRestante = cantidadVidaMaxima;
 		} else if (cantidadExperiencia == 6) {
 			copiaListaAtaques.add(segundoNivel);
 			cantidadVidaMaxima+=3;

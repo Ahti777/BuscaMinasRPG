@@ -1,7 +1,7 @@
 package clases;
 
 /**
- * @Autor Artem Zimin Litvak
+ * @Autor Danilo José Mendez Mendez / Artem Zimin Litvak
  * @version 10/02/2026
  */
 public class Monstruo extends Entidad{
@@ -21,13 +21,7 @@ public class Monstruo extends Entidad{
 		usoHeroe.setCantidadExperiencia(usoHeroe.getCantidadExperiencia()+4);
 
 	}
-	/**
-	 * 
-	 * @param miAtaque
-	 */
-	public void ataqueMonstruo(Ataque miAtaque) {
-		
-	}
+	
 	
 	
 }
