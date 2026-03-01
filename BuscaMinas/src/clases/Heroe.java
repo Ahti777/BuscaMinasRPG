@@ -2,17 +2,18 @@ package clases;
 
 /**
  * @Autor Danilo José Mendez Mendez / Artem Zimin Litvak
- *@version 17/02/2026
+ * @version 17/02/2026
+ * 
+ * Heroe: es una Entidad que posee canidadExperiencia, miEquipamiento (lista de Equipamiento) y listaAtaque (lista de ataques).
  */
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.Random;
 
 public class Heroe extends Entidad {
 	/**
-	 * cantidadExperiencia: la cantidad de experiencia que posee Heroe
-	 * miEquipamiento: lista de objetos que posee Heroe
-	 * listaAtaques: lista de ataques que puede usar Heroe
+	 * cantidadExperiencia: la cantidad de experiencia que posee Heroe.
+	 * miEquipamiento: lista de objetos que posee Heroe.
+	 * listaAtaques: lista de ataques que puede usar Heroe.
 	 */
 	private int cantidadExperiencia;
 	private ArrayList<Equipamiento> miEquipamiento;
@@ -92,7 +93,7 @@ public class Heroe extends Entidad {
 
 
 	/**
-	 * 
+	 * calcularDañoAtaque(Heroe usoHeroe, int num): multiplica el ataque que posee el Heroe junto a el porcentaje del ataque
 	 * @param usoHeroe
 	 * @param num
 	 * @return int
@@ -100,14 +101,6 @@ public class Heroe extends Entidad {
 	public int calcularDañoAtaque(Heroe usoHeroe, int num) {
 		return (int) (usoHeroe.getCantidadAtaque() * usoHeroe.getListaAtaques().get(num).getEscaladoDaño()) + 1;
 	}
-	/*public boolean probabilidadAcierto(Heroe usoHeroe, int num) {
-		Random numeroAleaotorio;
-		int porcentajeAcierto=numeroAleaotorio.nextInt(100-0+1)+0;
-		/*
-		if(usoHeroe.getListaAtaques().get(num).getCantidadAcierto()<) {
-			
-		}
-		*/
 	
 
 	/**
@@ -115,12 +108,15 @@ public class Heroe extends Entidad {
 	 */
 	public void subirNivel() {
 		/**
-		 * RECORDAR: ESTO SON DATOS DE PRUEBA. NO APARECERAN EN LA VERSIÓN DE VERDAD
+		 * copiaListaAtaques: hace una copia de la listaAtaques que tiene Heroe.
+		 * primerNivel: es uno de los ataques que se añaden a copiaListaAtaques.
+		 * segundoNivel: es uno de los ataques que se añaden a copiaListaAtaques.
+		 * terceroNivel: es uno de los ataques que se añaden a copiaListaAtaques.
 		 */
 		ArrayList<Ataque> copiaListaAtaques = listaAtaques;
 		Ataque primerNivel = new Ataque("Golpe ascendente con backflip", 0.80, 1.2);
 		Ataque segundoNivel = new Ataque("Golpe ascendente con baile", 0.60, 1.4);
-		Ataque terceroNivel = new Ataque("Golpe mediante una mona china frigorifico", 0.30, 1.7);
+		Ataque terceroNivel = new Ataque("Cabezazo metálico fuerte", 0.30, 1.7);
 		if (cantidadExperiencia == 3) {
 			copiaListaAtaques.add(primerNivel);
 			cantidadVidaMaxima+=3;
@@ -129,7 +125,7 @@ public class Heroe extends Entidad {
 			copiaListaAtaques.add(segundoNivel);
 			cantidadVidaMaxima+=3;
 			cantidadVidaRestante += cantidadVidaMaxima;
-		} else if (cantidadExperiencia == 10) {
+		} else if (cantidadExperiencia == 9) {
 			copiaListaAtaques.add(terceroNivel);
 			cantidadVidaMaxima+=3;
 			cantidadVidaRestante += cantidadVidaMaxima;

@@ -2,11 +2,13 @@ package clases;
 /**
  * @Autor Danilo José Mendez Mendez / Artem Zimin Litvak
  * @version 14/02/2026
+ * 
+ * Equipamiento: son objetos que mejoran a Heroe.
  */
 public class Equipamiento {
 	/**
-	 * nombre: nombre que tiene el equipamiento
-	 * cantVidaAumenta: es la vida que aumenta al heroe
+	 * nombre: nombre que tiene el equipamiento.
+	 * cantVidaAumenta: es la vida que aumenta al heroe.
 	 */
 	private String nombre;
 	private int cantVidaAumenta;

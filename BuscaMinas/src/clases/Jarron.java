@@ -5,6 +5,8 @@ import java.util.ArrayList;
 /**
  * @Autor Danilo José Mendez Mendez / Artem Zimin Litvak
  * @version 10/02/2026
+ * 
+ * Jarron: Entidad que permite porporcionar varias mejoras a Heroe o nada.
  */
 public class Jarron extends Entidad{
 	
@@ -12,7 +14,7 @@ public class Jarron extends Entidad{
 		super(cantidadVida, cantidadAtaque);
 	}
 	/**
-	 * darVida(): permite aumentar la vida que posee el heroe
+	 * darVida(): permite aumentar la vida que posee el heroe.
 	 */
 	public void darVida(Heroe usoHeroe) {
 		if(usoHeroe.getCantidadVidaRestante()+(usoHeroe.getCantidadVidaRestante()*0.15)>usoHeroe.getCantidadVidaMaxima()) {
@@ -22,11 +24,11 @@ public class Jarron extends Entidad{
 		}
 	}
 	/**
-	 * darExperiencia(): le da al heroe una cantidad de experiencia
+	 * darExperiencia(): le da al heroe una cantidad de experiencia.
 	 * @param usoHeroe
 	 */
 	public void darExperiencia(Heroe usoHeroe) {
-		usoHeroe.setCantidadVidaRestante(4);
+		usoHeroe.setCantidadVidaRestante(3);
 	}
 	/**
 	 * 
@@ -47,7 +49,7 @@ public class Jarron extends Entidad{
 		
 	}
 	/**
-	 * generarAleatoriedadAcciones(): elige de forma aleatoria si ejeutar el método darVida(), darEquipamiento(),darExperiencia() o nada
+	 * generarAleatoriedadAcciones(): elige de forma aleatoria si ejeutar el método darVida(), darEquipamiento(),darExperiencia() o nada.
 	 * @param usoHeroe
 	 * @param listaEquipamientoDisponible
 	 */
@@ -56,15 +58,16 @@ public class Jarron extends Entidad{
 		
 		if(numeroAleatorio>=0 && numeroAleatorio<25) {
 			darVida(usoHeroe);
-			System.out.println("vida");
+			System.out.println("El jarrón se romprió, y ahora te sientes más vivo.");
 		}else if(numeroAleatorio>=25 && numeroAleatorio<50) {
 			darEquipamiento(usoHeroe, listaEquipamientoDisponible);
-			System.out.println("Equipamiento");
+			System.out.println("El jarron proporcionó equipamiento al heroe.");
 		}else if(numeroAleatorio>=50 && numeroAleatorio<75) {
 			darExperiencia(usoHeroe);
-			System.out.println("experiencia");
+			usoHeroe.subirNivel();
+			System.out.println("El jarrón dio experiencia sobre el combate.");
 		}else if(numeroAleatorio>=75 && numeroAleatorio<125) {
-			System.out.println("La nada");
+			System.out.println("El jarron sólo tenía polvo dentro");
 		}
 	}
 	

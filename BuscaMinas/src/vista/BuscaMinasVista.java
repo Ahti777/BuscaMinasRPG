@@ -10,22 +10,22 @@ import clases.Tabla;
  */
 public interface BuscaMinasVista {
 	/**
-	 * mostrarMensaje():
+	 * mostrarMensaje(): muestra un String.
 	 * @return void
 	 */
 	void mostrarMensaje(String texto);
 	/**
-	 * pedirFila():
+	 * pedirFila(): pide la cantidad de filas máximas de la tabla.
 	 * @return int
 	 */
-	int pedirFila();
+	int pedirFila(); 
 	/**
-	 * pedirColumna():
+	 * pedirColumna(): pide la cantidad de columas máximas de la tabla.
 	 * @return int
 	 */
 	int pedirColumna();
 	/**
-	 * mostrarTable():
+	 * mostrarTable(): mustra la tabla
 	 * @return void
 	 */
 	void mostrarTabla(Tabla usoTabla);

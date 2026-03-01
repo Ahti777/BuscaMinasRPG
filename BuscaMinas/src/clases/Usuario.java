@@ -1,14 +1,15 @@
 package clases;
-
 /**
  * @Autor Danilo José Mendez Mendez / Artem Zimin Litvak
- *@version 10/02/2026
+ * @version 10/02/2026
+ * 
+ * Usuario: es el persona que se identifica en la app, también permite crear varias Partida y jugar.
  */
-import java.util.ArrayList;
-import java.util.List;
-
 public class Usuario {
-
+	/**
+	 * nombre: es el nombre que identifica al Usuario.
+	 * constrasenia: es el texto que verifica que el Usuario te pertenece.
+	 */
 	private String nombre;
 	private String contrasenia;
 	

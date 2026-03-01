@@ -3,6 +3,8 @@ package clases;
 /**
  * @Autor Danilo José Mendez Mendez / Artem Zimin Litvak
  * @version 10/02/2026
+ * 
+ * Monstruo: Entidad que es la oposición al Heroe.
  */
 public class Monstruo extends Entidad{
 	
@@ -14,11 +16,10 @@ public class Monstruo extends Entidad{
 		super(cantidadVida, cantidadAtaque);
 	}
 	/**
-	 * darExperiencia(Heroe usoHeroe): suministra experiencia a Heroe
-	 * RECORDATORIO: ESTO NO ES LA FUNCIÓN DEFINITIVA
+	 * darExperiencia(Heroe usoHeroe): suministra experiencia a Heroe.
 	 */
 	public void darExperiencia(Heroe usoHeroe) {
-		usoHeroe.setCantidadExperiencia(usoHeroe.getCantidadExperiencia()+4);
+		usoHeroe.setCantidadExperiencia(usoHeroe.getCantidadExperiencia()+3);
 
 	}
 	

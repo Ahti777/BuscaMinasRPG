@@ -3,6 +3,8 @@ package clases;
 /**
  * @Autor Danilo José Mendez Mendez / Artem Zimin Litvak
  * @version 10/02/2026
+ * 
+ * Partida: permite asignar y gestionar mediante un id y nombre los distintos inicios de juego.
  */
 public class Partida {
 	static private int contadorPartidas;

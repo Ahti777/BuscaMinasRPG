@@ -2,11 +2,13 @@ package clases;
 /**
  * @author Danilo José Mendez Mendez / Artem Zimin Litvak
  * @version 2.0 14/02/2026
+ * 
+ * Celda: es una casilla de un tablero que almacena el contenido que posee, además de mostrar un número al rededor del contenido de las celdas circundantes.
  */
 public class Celda {
 	/**
 	 * tieneMina: muestra si la celda es una mina o no.
-	 * numero: es la cantidad de minas que tiene esa mina al rededor
+	 * numero: es la cantidad de minas que tiene esa mina al rededor.
 	 * visible: identifica si esa mina ha sido elegida y se sabe su contenido, o si no ha sido elegida y es desconocida.
 	 */
 	private boolean tieneMina;

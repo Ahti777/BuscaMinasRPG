@@ -2,12 +2,14 @@ package clases;
 /**
  * @Autor Danilo José Mendez Mendez / Artem Zimin Litvak
  * @version 17/02/2026
+ * 
+ * Ataque: es la acción que ejecuta el Heroe.
  */
 public class Ataque {
 	/**
-	 * nombre: es el nombre del ataque
-	 * cantidadAcierto: es la probabilidad de que falle el ataque
-	 * escaladoDaño: el porcentaje que aumenta la vida del heroe
+	 * nombre: es el nombre del ataque.
+	 * cantidadAcierto: es la probabilidad de que falle el ataque.
+	 * escaladoDaño: el porcentaje que aumenta la vida del heroe.
 	 */
 	private String nombre;
 	private double cantidadAcierto;
@@ -59,7 +61,7 @@ public class Ataque {
 		this.escaladoDaño = escaladoDaño;
 	}
 	/**
-	 * toStringAtaque(): muestra el nombre, cantidad de acierto y el porcentaje de daño que aumenta
+	 * toStringAtaque(): muestra el nombre, cantidad de acierto y el porcentaje de daño que aumenta.
 	 * @return
 	 */
 	public String toStringAtaque() {

@@ -5,8 +5,6 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-import javax.management.ListenerNotFoundException;
-
 import Excepciones.ContraseniaIncorrecta;
 import Excepciones.FalloInicioSesion;
 import Excepciones.ListaPartidasVacia;
@@ -18,6 +16,8 @@ import Excepciones.YaExistePartida;
 /**
  * @author Danilo José Mendez Mendez / Artem Zimin Litvak
  * @version 27/02/26
+ * 
+ * GestionPartida: permite crear o eliminar Usuarios, iniciar sesion y crear partidas, eliminar o visualizarlas.
  */
 public class GestionPartidas {
 	/**
@@ -57,7 +57,11 @@ public class GestionPartidas {
 		partidasGuardadas.put(nuevoUsuario, new ArrayList<>());
 
 	}
-
+	/**
+	 * eliminarUsuario(String nombreUsuario, String contrasenia): permite eliminar un usuario mediante su nombre y la constraseña.
+	 * @param nombreUsuario
+	 * @param contrasenia
+	 */
 	public void eliminarUsuario(String nombreUsuario, String contrasenia) {
 		Iterator<Map.Entry<Usuario, ArrayList<Partida>>> it = partidasGuardadas.entrySet().iterator();
 		while (it.hasNext()) {
@@ -69,20 +73,32 @@ public class GestionPartidas {
 		}
 
 	}
-
+	/**
+	 * iniciarSesion(String nombreUsuario, String contrasenia): permite iniciar sesión a un usuario, mediante un nombre y una contraseña.
+	 * @param nombreUsuario
+	 * @param contrasenia
+	 * @return boolean
+	 */
 	public boolean iniciarSesion(String nombreUsuario, String contrasenia) {
+		boolean inicioSesion=false;
 		Iterator<Map.Entry<Usuario, ArrayList<Partida>>> it = partidasGuardadas.entrySet().iterator();
-		boolean sesionIniciada = false;
 		while (it.hasNext()) {
 			Map.Entry<Usuario, ArrayList<Partida>> entrada = it.next();
 			if (entrada.getKey().getNombre().equals(nombreUsuario) && entrada.getKey().getContrasenia().equals(contrasenia)) {
-				sesionIniciada = true;
+				inicioSesion = true;
+				return inicioSesion;
 			}
 		}
-		return sesionIniciada;
+		return inicioSesion;
+		
 
 	}
-
+	/**
+	 * crearPartida(String nombreUsuario, String contrasenia, String nombrePartida): permite crear un partida y asignarle un nombre.
+	 * @param nombreUsuario
+	 * @param contrasenia
+	 * @param nombrePartida
+	 */
 	public void crearPartida(String nombreUsuario, String contrasenia, String nombrePartida) {
 		Iterator<Map.Entry<Usuario, ArrayList<Partida>>> it = partidasGuardadas.entrySet().iterator();
 
@@ -94,7 +110,12 @@ public class GestionPartidas {
 		}
 
 	}
-
+	/**
+	 * eliminarPartida(String nombreUsuario, String contrasenia, String nombrePartida): permite eliminar una partida medianete su nombre.
+	 * @param nombreUsuario
+	 * @param contrasenia
+	 * @param nombrePartida
+	 */
 	public void eliminarPartida(String nombreUsuario, String contrasenia, String nombrePartida) {
 		ArrayList<Partida> listaActualizada = new ArrayList<>();
 		Iterator<Map.Entry<Usuario, ArrayList<Partida>>> it = partidasGuardadas.entrySet().iterator();
@@ -115,6 +136,12 @@ public class GestionPartidas {
 			
 		}
 	}
+	/**
+	 * mostrarPartidas(String nombreUsuario, String contrasenia): muestra las partidas creadas por un usuario.
+	 * @param nombreUsuario
+	 * @param contrasenia
+	 * @return String
+	 */
 	public String mostrarPartidas(String nombreUsuario, String contrasenia) {
 		String texto="";
 		Iterator<Map.Entry<Usuario, ArrayList<Partida>>> it = partidasGuardadas.entrySet().iterator();
@@ -129,7 +156,11 @@ public class GestionPartidas {
 		return texto;
 		
 	}
-	
+	/**
+	 * validarUsusarioNoExistente(String nombreUsuario): compruba si el usuario ingresado no existe, para lanzar un excepcion UsuarioNoExiste. 
+	 * @param nombreUsuario
+	 * @throws UsuarioNoExiste
+	 */
 	public void validarUsusarioNoExistente(String nombreUsuario) throws UsuarioNoExiste{
 		int contadorAparicionesNombre=0;
 		Iterator<Map.Entry<Usuario, ArrayList<Partida>>> it = partidasGuardadas.entrySet().iterator();
@@ -143,7 +174,12 @@ public class GestionPartidas {
 			throw new UsuarioNoExiste();
 		}
 	}
-	
+	/**
+	 * validarContraseñaIntroducida(String nombreUsuario,String contrasenia): comprueba si la contraseña no es la misma a la que se puso al crear el usuario, para lanzar la excepcion ContraseniaIncorrecta.
+	 * @param nombreUsuario
+	 * @param contrasenia
+	 * @throws ContraseniaIncorrecta
+	 */
 	public void validarContraseñaIntroducida(String nombreUsuario,String contrasenia) throws ContraseniaIncorrecta{
 		Iterator<Map.Entry<Usuario, ArrayList<Partida>>> it = partidasGuardadas.entrySet().iterator();
 		while (it.hasNext()) {
@@ -153,14 +189,24 @@ public class GestionPartidas {
 			}
 		}
 	}
-	
+	/**
+	 * validarInicioSesion(String nombre, String contrasenia): lanza la excepción FalloInicioSesion si inicio sesion devuelve false.
+	 * @param nombre
+	 * @param contrasenia
+	 * @throws FalloInicioSesion
+	 */
 	public void validarInicioSesion(String nombre, String contrasenia) throws FalloInicioSesion{
 		if(!iniciarSesion(nombre, contrasenia)) {
 			throw new FalloInicioSesion();
 		}
 		
 	}
-	
+	/**
+	 * validarNombrePartida(String nombreUsuario,String nombrePartida): lanza la excepción YaExistePartida, cuando ya existe una Partida con el mismo nombre.
+	 * @param nombreUsuario
+	 * @param nombrePartida
+	 * @throws YaExistePartida
+	 */
 	public void validarNombrePartida(String nombreUsuario,String nombrePartida) throws YaExistePartida{
 		int contadorAparicionesNombrePartida=0;
 		Iterator<Map.Entry<Usuario, ArrayList<Partida>>> it = partidasGuardadas.entrySet().iterator();
@@ -178,7 +224,12 @@ public class GestionPartidas {
 			throw new YaExistePartida();
 		}
 	}
-	
+	/**
+	 * validarExistenciaPartida(String nombrePartida): lanza la excepción NoExistePartida, cuando no existe Partida con el nombre nombrePartida.
+	 * @param nombrePartida
+	 * @throws NoExistePartida
+	 */
+	@SuppressWarnings("unlikely-arg-type")
 	public void validarExistenciaPartida(String nombrePartida) throws NoExistePartida{
 		Iterator<Map.Entry<Usuario, ArrayList<Partida>>> it = partidasGuardadas.entrySet().iterator();
 		while (it.hasNext()) {
@@ -188,14 +239,21 @@ public class GestionPartidas {
 			}
 		}
 	}
-	
+	/**
+	 * validarListaUsuariosVacia(): lanza la excepción ListaUsuariosVacia, si no existen Usuario.
+	 * @throws ListaUsuariosVacia
+	 */
 	public void validarListaUsuariosVacia() throws ListaUsuariosVacia{
 		if(partidasGuardadas.size()==0) {
 			throw new ListaUsuariosVacia();
 		}
 	}
-	
-	public void validarListaPartidasVacia(String  nombreUsuario) throws ListaPartidasVacia{
+	/**
+	 * validarListaPartidasVacia(String nombreUsuario): lanza la excepcion ListaPartidasVacia, si no existen Partida en el Usuario nombreUsuario.
+	 * @param nombreUsuario
+	 * @throws ListaPartidasVacia
+	 */
+	public void validarListaPartidasVacia(String nombreUsuario) throws ListaPartidasVacia{
 		Iterator<Map.Entry<Usuario, ArrayList<Partida>>> it = partidasGuardadas.entrySet().iterator();
 		while (it.hasNext()) {
 			Map.Entry<Usuario, ArrayList<Partida>> entrada = it.next();
@@ -204,7 +262,11 @@ public class GestionPartidas {
 			}
 		}
 	}
-	
+	/**
+	 * validarUsuarioRepetido(String nombreUsuario): lanza la excepción UsuarioRepetido, cuando se intenta crear un usuario con un nombre idéntico a uno que ya existe.
+	 * @param nombreUsuario
+	 * @throws UsuarioRepetido
+	 */
 	public void validarUsuarioRepetido(String nombreUsuario) throws UsuarioRepetido{
 		int contadorAparicionesNombre=0;
 		Iterator<Map.Entry<Usuario, ArrayList<Partida>>> it = partidasGuardadas.entrySet().iterator();

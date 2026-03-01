@@ -34,10 +34,12 @@ public class BuscaMinasVistaConsola implements BuscaMinasVista {
 		System.out.println("Qué cantidad de columnas va a tener la tabla?(mínimo 8)");
 		return teclado.nextInt();
 	}
-
+	/**
+	 * mostrarTabla(Tabla usoTabla): muestra la tabla completa
+	 */
 	@Override
 	public void mostrarTabla(Tabla usoTabla) {
-		int contador=0;
+		System.out.println("===============================");
 		for(int i = 0; usoTabla.getMapaCeldas().length > i; i++) {
 			if(i==0) {
 				System.out.print("   "+i);
@@ -71,14 +73,27 @@ public class BuscaMinasVistaConsola implements BuscaMinasVista {
 			}
 			System.out.println("");
 		}
+		System.out.println("===============================");
 
 	}
 	/**
-	 * mostrarTablaVisible
+	 * mostrarTablaVisible(Tabla usoTabla): muestra la tabla completa visible
 	 * @param usoTabla
 	 */
 	public void mostrarTablaVisible(Tabla usoTabla) {
+		System.out.println("****************************");
+		for(int i = 0; usoTabla.getMapaCeldas().length > i; i++) {
+			if(i==0) {
+				System.out.print("   "+i);
+			}else if(i==(usoTabla.getMapaCeldas().length -1)) {
+				System.out.print("  "+i+"\n");
+			}
+			else {
+				System.out.print("  "+i);
+			}
+		}
 		for (int i = 0; usoTabla.getMapaCeldas().length > i; i++) {
+			System.out.print(i+" ");
 			for (int t = 0; usoTabla.getMapaCeldas()[i].length > t; t++) {
 				usoTabla.getMapaCeldas()[i][t].setVisible(true);
 				if (usoTabla.getMapaCeldas()[i][t].isVisible()) {
@@ -101,15 +116,23 @@ public class BuscaMinasVistaConsola implements BuscaMinasVista {
 			}
 			System.out.println("");
 		}
+		System.out.println("****************************");
 
 	}
 
-	
+	/**
+	 * mostrarEstadisticasHeroe(Heroe usoHeroe): muestra las estadísticas del Heroe
+	 * @param usoHeroe
+	 */
 	public void mostrarEstadisticasHeroe(Heroe usoHeroe) {
+		System.out.println("==============================");
 		System.out.println("Estadísticas Heroe: ");
 		System.out.println("Vida: "+usoHeroe.getCantidadVidaRestante()+" Experiencia: "+usoHeroe.getCantidadExperiencia());
+		System.out.println("==============================");
 	}
-	
+	/**
+	 * mostrarTutorial(): muestra una breve historia con un tutorial de como funciona el juego.
+	 */
 	public void mostrarTutorial() {
 		System.out.println("\n"
 				+ "Gracias por jugar a ?"
@@ -120,7 +143,7 @@ public class BuscaMinasVistaConsola implements BuscaMinasVista {
 				+ "\nAhora ella lo maldijo y su mente fue transportada a una dimesión extrasensorial donde su vida depende de ti"
 				+ "\nhabilidad para esquivar minas y batir a Gabriel en duelo contra los monstruos que quieren purgarlo."
 				+ "\nAhora es tu turno, elige bien, intenta que no se muera y ten fe jugador. Que Dios te acompañe."
-				+ "\nFirmado por † La tarotista †"
+				+ "\nFirmado por La †arotista "
 				+ "\n------------------------------------------------------------------------------------------------------------"
 				+ "\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<Jugabilidad:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
 				+ "\nPaso 1: seleccionar que fila y que columa elegir"
@@ -130,6 +153,30 @@ public class BuscaMinasVistaConsola implements BuscaMinasVista {
 				+ "\n            * Monstruo -> 1"
 				+ "\n            * Jarrón -> 2"
 				+ "\nPaso 3: intenta ganar"
+				+ "\n"
+				+ "\n");
+	}
+	/**
+	 * mostrarFinalHistoriaGananar(): muestra el final de la historia si has ganado.
+	 */
+	public void mostrarFinalHistoriaGananar() {
+		System.out.println("\n"
+				+ "\n-------------------------------------------Historia:-------------------------------------------------------"
+				+ "\nTodo parece correcto, ya no hay más peligro; pero, hay un ambiente vacio. Tu puedes ver confusión en sus ojos,"
+				+ "\nal igual que tu. Derrepente se escucha una voz en el fondo, es la †arotista que hace presencia ante ellos:"
+				+ "\n\"muy bien hecho aunque, demasiado bien de hecho. Gabriel Dominguez no merece vivir "
+				+ "\ny su alma vagará en está dimesión para siempre. Gracias por jugar, con él.\" "
+				+ "\n"
+				+ "\n");
+	}
+	/**
+	 * mostrarFinalHistoriaPerder(): muestra el final de la hisotria si has perdido.
+	 */
+	public void mostrarFinalHistoriaPerder() {
+		System.out.println("\n"
+				+ "\n-------------------------------------------Historia:-------------------------------------------------------"
+				+ "\nTu ves como Grabriel agoniza mientras sientes la presencia de la †arotista detrás tuya, y sientes satisfacción"
+				+ "\nen ella. Al final eela revela que su tortura acababa nada más de empezar. Grabriel ha perdido."
 				+ "\n"
 				+ "\n");
 	}

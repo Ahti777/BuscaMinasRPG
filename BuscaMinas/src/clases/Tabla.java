@@ -5,15 +5,20 @@ import Excepciones.CeldaYaSeleccionada;
 /**
  * @author Danilo José Mendez Mendez / Artem Zimin Litvak
  * @version 17/02/2026
+ * 
+ * 
  */
 public class Tabla {
 	/**
-	 * 
+	 * filas: cantidad de filas de contiene la tabla.
+	 * columnas: cantidad de columnas que tiene la tabla.
+	 * mapaCeldas: mapeado de las celdas, creando una tabla.
+	 * minimoFilasColumnas: es el minimo de filas y columnas que se pueden crear.
 	 */
 	private int filas;
 	private int columnas;
 	private Celda[][] mapaCeldas;
-	private final int minimoFilasColumnas=8;
+	private final int minimoFilasColumnas = 8;
 
 	/**
 	 * filas: cantidad de filas que tiene la tabla columnas: cantidad de columnas
@@ -26,10 +31,10 @@ public class Tabla {
 	 */
 	public Tabla(int filas, int columnas) {
 		super();
-		if(filas<minimoFilasColumnas || columnas<minimoFilasColumnas) {
-			this.filas=minimoFilasColumnas;
-			this.columnas=minimoFilasColumnas;
-		}else {
+		if (filas < minimoFilasColumnas || columnas < minimoFilasColumnas) {
+			this.filas = minimoFilasColumnas;
+			this.columnas = minimoFilasColumnas;
+		} else {
 			this.filas = filas;
 			this.columnas = columnas;
 		}
@@ -39,16 +44,12 @@ public class Tabla {
 
 	}
 
-	
-	
 	/**
 	 * @return the filas
 	 */
 	public int getFilas() {
 		return filas;
 	}
-
-
 
 	/**
 	 * @param filas the filas to set
@@ -57,16 +58,12 @@ public class Tabla {
 		this.filas = filas;
 	}
 
-
-
 	/**
 	 * @return the columnas
 	 */
 	public int getColumnas() {
 		return columnas;
 	}
-
-
 
 	/**
 	 * @param columnas the columnas to set
@@ -75,16 +72,12 @@ public class Tabla {
 		this.columnas = columnas;
 	}
 
-
-
 	/**
 	 * @return the mapaCeldas
 	 */
 	public Celda[][] getMapaCeldas() {
 		return mapaCeldas;
 	}
-
-
 
 	/**
 	 * @param mapaCeldas the mapaCeldas to set
@@ -94,7 +87,7 @@ public class Tabla {
 	}
 
 	/**
-	 * generarTablero(): establece el contenido de cada celda, si es mina, jarron, mosntruo o nada.
+	 * generarTablero(): establece el contenido de cada celda, si es mina, jarron, monstruo o nada.
 	 * 
 	 * @return Celda[][]
 	 */
@@ -110,7 +103,7 @@ public class Tabla {
 				tieneMina = false;
 				tieneJarron = false;
 				tieneMonstruo = false;
-				
+
 				if (tieneMina = generarMinas()) {
 					copiaMapaCeldas[i][t] = new Celda(generarMinas(), false, false, false);
 				} else {
@@ -132,10 +125,10 @@ public class Tabla {
 	 * 
 	 * @return boolean
 	 */
-
 	private boolean generarMinas() {
 		/**
-		 * RATIO_APARICION_MINAS: es el porcentaje de aparición de que una celda sea mina.
+		 * RATIO_APARICION_MINAS: es el porcentaje de aparición de que una celda sea
+		 * mina.
 		 */
 		final int RATIO_APARICION_MINAS = 40;
 		/**
@@ -148,17 +141,20 @@ public class Tabla {
 		}
 
 	}
+
 	/**
 	 * generarMonstruo(): calcula el 40 porciento de aparición de minas.
-	 * @return
+	 * 
+	 * @return boolean
 	 */
 	private boolean generarMonstruo() {
 		/**
 		 * RATIO_APARICION_MONSTRUO: es el porcentaje de que una celda sea mosntruo.
 		 */
 		final int RATIO_APARICION_MONSTRUO = 40;
-		/**
-		 * Calcula el porcentaje de aparición de un mosntruo y esto solo puede suceder si no existe jarrón.
+		/*
+		 * Calcula el porcentaje de aparición de un mosntruo y esto solo puede suceder
+		 * si no existe jarrón.
 		 */
 		if ((Math.random() * 100) + 1 <= RATIO_APARICION_MONSTRUO) {
 			return true;
@@ -169,6 +165,7 @@ public class Tabla {
 
 	/**
 	 * generarJarron(): calcula el 40 porciento de aparición de el jarrón.
+	 * 
 	 * @return
 	 */
 	private boolean generarJarron() {
@@ -190,6 +187,7 @@ public class Tabla {
 
 	/**
 	 * calcularNumeroMinas(): calcula la cantidad de minas, monstruos y jarrones tiene alrededor la celda.
+	 * 
 	 * @param fila
 	 * @param columna
 	 */
@@ -200,9 +198,9 @@ public class Tabla {
 				if (i >= 0 && i < filas && t >= 0 && t < columnas) {
 					if (getMapaCeldas()[i][t].isTieneMina()) {
 						copiaMapaCeldas[fila][columna].setNumero(copiaMapaCeldas[fila][columna].getNumero() + 10);
-					}else if(getMapaCeldas()[i][t].isTieneMonstruo()) {
+					} else if (getMapaCeldas()[i][t].isTieneMonstruo()) {
 						copiaMapaCeldas[fila][columna].setNumero(copiaMapaCeldas[fila][columna].getNumero() + 1);
-					}else if(getMapaCeldas()[i][t].isTieneJarron()) {
+					} else if (getMapaCeldas()[i][t].isTieneJarron()) {
 						copiaMapaCeldas[fila][columna].setNumero(copiaMapaCeldas[fila][columna].getNumero() + 2);
 					}
 				}
@@ -211,9 +209,10 @@ public class Tabla {
 		setMapaCeldas(copiaMapaCeldas);
 
 	}
-	
+
 	/**
-	 * establecerNumeroMinas(): compruba que la celda no sea mina, jarrón ni mostruo para poder calcular su número.
+	 * establecerNumeroMinas(): compruba que la celda no sea mina, jarrón ni mostruo
+	 * para poder calcular su número.
 	 */
 	private void establecerNumeroMinas() {
 		for (int i = 0; getMapaCeldas().length > i; i++) {
@@ -228,24 +227,65 @@ public class Tabla {
 
 		}
 	}
+
 	/**
-	 * verificarCeldaYaSeleccionada(int fila, int columna): verifica si la celda que elige el usuario ya ha sido seleccionada, comporbandolo mediante su visibilidad.
+	 * verificarCeldaYaSeleccionada(int fila, int columna): verifica si la celda que elige el usuario ya ha sido seleccionada, comporbandolo mediante su
+	 * visibilidad.
+	 * 
 	 * @param fila
 	 * @param columna
 	 * @throws CeldaYaSeleccionada
 	 */
-	public void verificarCeldaYaSeleccionada(int fila, int columna) throws CeldaYaSeleccionada{
-		for(int i = 0; i<mapaCeldas.length;i++) {
-			for(int t = 0; t<mapaCeldas.length;t++) {
-				if(i==fila && t==columna) {
-					if(mapaCeldas[i][t].isVisible()) {
+	public void verificarCeldaYaSeleccionada(int fila, int columna) throws CeldaYaSeleccionada {
+		for (int i = 0; i < mapaCeldas.length; i++) {
+			for (int t = 0; t < mapaCeldas.length; t++) {
+				if (i == fila && t == columna) {
+					if (mapaCeldas[i][t].isVisible()) {
 						throw new CeldaYaSeleccionada();
 					}
 				}
 			}
 		}
 	}
-	
-	
-	
+	/**
+	 * contarCeldasVaciasJarron(): cuenta las celdas que son Jarron o están vacias
+	 * @return int
+	 */
+	private int contarCeldasVaciasJarron() {
+		int cantidadCeldasVaciasJarron = 0;
+		for (int i = 0; mapaCeldas.length > i; i++) {
+			for (int t = 0; mapaCeldas[i].length > t; t++) {
+				if (mapaCeldas[i][t].isTieneJarron() || !mapaCeldas[i][t].isTieneMina()
+						|| !mapaCeldas[i][t].isTieneMonstruo()) {
+					cantidadCeldasVaciasJarron++;
+				}
+			}
+		}
+		return cantidadCeldasVaciasJarron;
+	}
+	/**
+	 * ganarPartida(): cuenta cuantas celdas son Jarron o están vacias y que son visibles, para después compararlo con la cantidad total de celdas Jarron y vacias. Esto determina si ganas o no.
+	 * @return boolean
+	 */
+	public boolean ganarPartida() {
+		int cantidadCeldasVaciasJarron = contarCeldasVaciasJarron();
+		int cantidadCeldasVisiblesVaciasJarron = 0;
+		for (int i = 0; mapaCeldas.length > i; i++) {
+			for (int t = 0; mapaCeldas[i].length > t; t++) {
+				if (mapaCeldas[i][t].isVisible()) {
+					if (mapaCeldas[i][t].isTieneJarron() || !mapaCeldas[i][t].isTieneMina()
+							|| !mapaCeldas[i][t].isTieneMonstruo()) {
+						cantidadCeldasVisiblesVaciasJarron++;
+					}
+				}
+			}
+		}
+		if (cantidadCeldasVaciasJarron == cantidadCeldasVisiblesVaciasJarron) {
+			return true;
+		} else {
+			return false;
+		}
+
+	}
+
 }

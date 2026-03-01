@@ -1,12 +1,14 @@
 package clases;
 /**
  * @Autor Danilo José Mendez Mendez / Artem Zimin Litvak
- *@version 10/02/2026
+ * @version 10/02/2026
+ *
+ * Entidad: es un personaje que tiene cantidadVidaMaxima, cantidadVidaRestante y cantidadAtaque.
  */
 public abstract class Entidad{
 	/**
-	 * cantidadVidaMaxima: cantidad límite de vida
-	 * cantidadVidaRestante: cantidad de vida que se modifica
+	 * cantidadVidaMaxima: cantidad límite de vida.
+	 * cantidadVidaRestante: cantidad de vida que se modifica.
 	 */
 	protected int cantidadVidaMaxima;
 	protected int cantidadVidaRestante;
